@@ -1,0 +1,472 @@
+.common {
+  &Head {
+    margin: 0 0 5.5rem 0;
+    &__head {
+      position: relative;
+      &--inner {
+        display: inline-block;
+        padding: 0 1.7rem;
+        height: 3rem;
+        line-height: 3rem;
+        background: $blue;
+        border-radius: 2.5rem;
+        color: #fedd48;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50);
+        background: $blue;
+        width: 100%;
+        height: 2px;
+        content: "";
+        z-index: -1;
+      }
+    }
+    &__ttl {
+      padding-bottom: 1.5rem;
+      margin: 0.9rem 0 0 0;
+      font-size: 2.4rem;
+      font-weight: bold;
+      color: $blue;
+      border-bottom: 2px solid $blue;
+    }
+  }
+  &Ttl {
+    padding-bottom: 0.85rem;
+    position: relative;
+    font-size: 2.6rem;
+    font-weight: bold;
+    &::after {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3rem;
+      height: 3px;
+      background: $blue;
+      bottom: 0;
+      content: "";
+    }
+  }
+}
+
+.top {
+  letter-spacing: 0.03em;
+  &__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &Left {
+    padding-top: 16rem;
+    width: 42%;
+    &__title {
+      &--sub {
+        display: block;
+        margin: 1rem 0 0;
+        font-size: 2.6rem;
+        font-weight: bold;
+        color: $siteColor;
+      }
+    }
+    &__list {
+      margin: 5.6rem 0 0;
+      border-top: 1px solid $siteColor;
+    }
+    &__link {
+      padding: 2rem 0;
+      border-bottom: 1px solid $siteColor;
+      &--sub {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1;
+        color: #141314;
+      }
+      &--main {
+        display: block;
+        margin: 0.5rem 0 0;
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: $siteColor;
+      }
+    }
+    &__btn {
+      margin: 5rem 0 0;
+      width: 41rem;
+      height: 6.8rem;
+    }
+    &Info {
+      margin: 5.7rem 0 0;
+      &__title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #141314;
+      }
+      &__tel {
+        margin: 2rem 0 0;
+        border: 2px solid #9abcdf;
+        border-radius: 0.8rem;
+        color: white;
+        text-align: center;
+        background: #6f95ba;
+      }
+      &__num {
+        margin: 0 2.2rem 0 0;
+        font-size: 3.6rem;
+        font-weight: bold;
+        .icon {
+          font-size: 3rem;
+        }
+      }
+      &__open {
+        font-size: 1.4rem;
+        line-height: 1.1;
+      }
+    }
+  }
+  &SP {
+    width: 40rem;
+    height: 100vh;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &Mv {
+    position: relative;
+    &__bottom {
+      padding: 1rem 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: $siteColor;
+      text-align: center;
+      &--head {
+        display: inline-block;
+        margin-left: 1.5rem;
+        color: #ffd400;
+        font-weight: bold;
+        line-height: 1;
+      }
+    }
+  }
+  &Copy {
+    position: relative;
+    padding: 3.5rem 0 8rem 0;
+    text-align: center;
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    &__head {
+      position: relative;
+      color: #433b3f;
+      font-size: 2.2rem;
+      font-weight: bold;
+      line-height: 1.6;
+      .guruguru {
+        position: absolute;
+        top: 55%;
+        transform: translateY(-50%);
+        &--left {
+          left: 0;
+        }
+        &--right {
+          right: 0;
+        }
+      }
+      &--line {
+        border-bottom: 2px dashed #433b3f;
+      }
+    }
+    &__img {
+      margin: 3rem 0 0 0;
+    }
+    &__msg {
+      margin: 1.6rem 0 0 0;
+      font-size: 2.2rem;
+      line-height: 1.6;
+      &--underline {
+        font-weight: bold;
+        background: linear-gradient(transparent 60%, #ffd400 40%);
+      }
+    }
+    &__sug {
+      margin: 3rem 0 0 0;
+      font-size: 2.2rem;
+      &--dot {
+        position: relative;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #d82c90;
+        &::after {
+          position: absolute;
+          top: -2rem;
+          left: 50%;
+          transform: translateX(-50%);
+          content: "・";
+          line-height: 1;
+        }
+      }
+    }
+  }
+  &Service {
+    padding: 10rem 0 5.3rem 0;
+    margin-top: -3rem;
+    position: relative;
+    text-align: center;
+    &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__ttl {
+      font-weight: bold;
+      &--logo {
+        margin: 0 auto 0.6rem auto;
+        width: 13.5rem;
+        height: 2.3rem;
+        background: #2d4f8c;
+        border-radius: 2rem;
+        img {
+          width: 9.2rem;
+        }
+      }
+      &--main {
+        display: block;
+        font-size: 3rem;
+      }
+      &--sub {
+        display: block;
+        font-size: 1.6rem;
+      }
+    }
+    &Copy {
+      &__img {
+        margin: 2.5rem 0 0 0;
+        img {
+          border: 2px solid #88a3d0;
+          border-radius: 8px;
+        }
+      }
+      &__text {
+        margin: 2rem 0 0 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
+    }
+    &Item {
+      &Wrap {
+        margin: 3.5rem 0 0 0;
+        padding: 3rem 2rem;
+        background: #f5fdff;
+        border-radius: 8px;
+        &__ttl {
+          margin: 0 0 4rem 0;
+        }
+      }
+      margin-bottom: 6.3rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &__img {
+        position: relative;
+        img {
+          border-radius: 1rem;
+        }
+      }
+      &__feature {
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        transform: translateY(-35%);
+      }
+      &__text {
+        padding-top: 1.5rem;
+      }
+      &__ttl {
+        font-weight: bold;
+        white-space: nowrap;
+        &--underline {
+          background: linear-gradient(transparent 60%, #ffd400 40%);
+        }
+      }
+      &__content {
+        margin-top: 1.3rem;
+        font-size: 1.4rem;
+      }
+    }
+    &Spot {
+      padding-top: 6.4rem;
+      &__list {
+        margin: 3rem 0 2rem 0;
+      }
+      &__link {
+        padding: 0.6rem;
+        border-radius: 0.8rem;
+        background: #f5fdff;
+        width: calc((100% - 0.6rem) / 2);
+        color: $fontColor;
+        line-height: 1.2;
+        font-weight: bold;
+        img {
+          margin-bottom: 0.5rem;
+          border-radius: 0.6rem 0.6rem 0 0;
+        }
+        .icon {
+          color: $blue;
+        }
+        &:nth-child(n + 3) {
+          margin: 0.7rem 0;
+        }
+      }
+      &Item {
+        margin-bottom: 1.5rem;
+        border-radius: 0.8rem;
+        background: #f5fdff;
+        border: 2px solid $blue;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &__head {
+          padding: 0.8rem 0 0.5rem 0;
+          background: $blue;
+          color: white;
+          &--en {
+            display: block;
+            font-size: 1.2rem;
+            letter-spacing: 0.05rem;
+            line-height: 1;
+          }
+          &--spot {
+            line-height: 1;
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+        &__inner {
+          padding: 1.8rem 1.5rem 2rem 1.5rem;
+        }
+        &__text {
+        }
+        &__img {
+          margin: 1.5rem 0 0 0;
+          .tri {
+            width: 1.5rem;
+          }
+          img {
+            width: calc((100% - 3rem) / 2);
+          }
+        }
+        &__price {
+          margin: 1.5rem 0 0 0;
+          &--head {
+            border-radius: 0.8rem;
+            border: 1px solid $blue;
+            color: #2d4f8c;
+            line-height: 1.5;
+          }
+          &--num {
+            font-size: 3.8rem;
+            font-weight: bold;
+            letter-spacing: 0;
+          }
+          &--nontax {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 0;
+          }
+          &--notice {
+            font-size: 1.2rem;
+            line-height: 1;
+          }
+        }
+        &__spot {
+          margin: 1.2rem 0 0 0;
+          &--head {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            background: $blue;
+            border-radius: 5rem;
+            color: white;
+          }
+          &--content {
+            font-size: 1rem;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  @media #{$media-tab} {
+    &__bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &Left {
+      display: none;
+    }
+    &SP {
+      margin: 0 auto 0 auto;
+      width: 40rem;
+      height: 100vh;
+      overflow: scroll;
+      background: white;
+    }
+  }
+  @media #{$media-sp} {
+    &__bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &Left {
+      display: none;
+    }
+    &SP {
+      margin: 0 auto 0 auto;
+      width: 100%;
+      height: 100vh;
+      overflow: scroll;
+      background: white;
+    }
+  }
+}
