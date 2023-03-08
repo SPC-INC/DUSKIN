@@ -21,11 +21,13 @@ $serif: "Noto Serif JP", Yu Mincho, YuMincho, Hiragino Mincho ProN, "NotoSerifCJ
 //================================
 // ■カラー
 //================================
-$siteColor: #d82c90;
+$siteColor: #d91186;
 $fontColor: #141314;
 $borderColor: #e6e6e6;
 $blue: #4c79c9;
-
+$pink: #e4567e;
+$pink2: #d91186;
+$pink3: #d82c90;
 $twitterColor: #1da1f2;
 $facebookColor: #1778f2;
 $lineColor: #00b900;
@@ -77,7 +79,7 @@ $media-land: "screen and (orientation:landscape)"; //ランドスケープ
 $media-full: "screen and (min-width:#{$site-width})"; //想定最大幅
 $media-notfull: "screen and (max-width:#{$site-width - 1})"; //最大未満
 $media-pc: "screen and (min-width:#{$pc-width})"; //PC相当以上
-$media-tab: "screen and (min-width:#{$tab-width}) and (max-width:#{$pc-width})"; //タブレット相当
+$media-tab: "screen and (min-width:#{$tab-width - 1 }) and (max-width:#{$pc-width})"; //タブレット相当
 $media-ipad: "screen and (min-width:#{$tab-width - 1}))"; //iPad相当
 $media-notsp: "screen and (min-width:#{$tab-width})"; //SP以外
 $media-sp: "screen and (max-width:#{$sp-width})"; //SP相当

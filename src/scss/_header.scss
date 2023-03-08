@@ -1,6 +1,6 @@
 // ヘッダーの高さ
 $headerPC: 10rem;
-$headerSP: 6rem;
+$headerSP: 5rem;
 
 /*
 ########     ###    ########
@@ -27,12 +27,18 @@ $headerSP: 6rem;
 ##     ## ######## ##     ## ########  ######## ##     ##
 */
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: $headerPC;
   white-space: nowrap;
+  z-index: 9999;
+  @media #{$media-tab} {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40rem;
+  }
   &__frame {
     padding: 0 0 0 5rem;
     height: 100%;
@@ -58,8 +64,12 @@ $headerSP: 6rem;
   @media #{$media-sp} {
     max-height: 100%;
     overflow: auto;
+    height: $headerSP;
     &__frame {
-      padding: 0 0 0 $pad;
+      padding: 0 2rem 0 2rem;
+    }
+    &__logo {
+      width: 7.6rem;
     }
     &__base {
     }

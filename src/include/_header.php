@@ -37,8 +37,8 @@
                         <?php echo IS_HOME ?  '</h1>' : '</span>'; ?>
                     </a>
                 </div>
-                <div class="header__right flex">
-
+                <div class="header__right sp flex vcenter">
+                    <img src="<?php echo HOME ?>img/logo2.svg" alt="">
                 </div>
             </div>
         </div>
