@@ -22,25 +22,26 @@ if (document.querySelector('[name^="ok"]')) {
   document.querySelector('[name^="ok"]').setAttribute('data-errormessage', '同意の上チェックしてください')
 }
 
-if (document.getElementsByClassName('mw_wp_form')[0]) {
-  // MW側のSubmit禁止処理を外す
-  const observeItem = document.querySelector('input[type="submit"]')
-  const observer = new MutationObserver((records) => {
-    if (!observeItem.hasAttribute('disabled')) {
-      return
-    }
-    observeItem.removeAttribute('disabled')
-  })
-  observer.observe(observeItem, {
-    // 指定要素の変化を監視
-    attributes: true, // 属性の変化を監視
-    attributeFilter: ['disabled'], // 監視する属性
-  })
+// if (document.getElementsByClassName('mw_wp_form')[0]) {
+//   // MW側のSubmit禁止処理を外す
+//   const observeItem = document.querySelector('input[type="submit"]')
+//   const observer = new MutationObserver((records) => {
+//     if (!observeItem.hasAttribute('disabled')) {
+//       return
+//     }
+//     observeItem.removeAttribute('disabled')
+//   })
+//   observer.observe(observeItem, {
+//     // 指定要素の変化を監視
+//     attributes: true, // 属性の変化を監視
+//     attributeFilter: ['disabled'], // 監視する属性
+//   })
 
-  $('.mw_wp_form').find('form').validationEngine({
-    scrollOffset: 200,
-  })
-}
+// }
+
+$('form').validationEngine({
+  // scrollOffset: 200,
+})
 /*
 条件に応じて以下のclassを各inputに設定する
 ■必須入力

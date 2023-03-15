@@ -2,6 +2,7 @@
   &Head {
     &__head {
       position: relative;
+      color: $blue5;
       &--inner {
         display: inline-block;
         padding: 0 1.7rem;
@@ -11,9 +12,9 @@
         font-weight: bold;
         line-height: 3rem;
         color: #fedd48;
-        background: $blue;
+        background: $blue5;
         &.pink {
-          background: $pink;
+          background: $pink5;
         }
       }
       &::after {
@@ -23,7 +24,7 @@
         z-index: -1;
         width: 100%;
         height: 2px;
-        background: $blue;
+        background: $blue5;
         transform: translateY(-50%);
         content: "";
       }
@@ -34,7 +35,7 @@
       }
       &--pink {
         &::after {
-          background: $pink;
+          background: $pink5;
         }
       }
     }
@@ -42,13 +43,13 @@
     &__ttl {
       margin: 0.9rem 0 0;
       padding-bottom: 1.5rem;
-      border-bottom: 2px solid $blue;
+      border-bottom: 2px solid $blue5;
       font-size: 2.4rem;
       font-weight: bold;
-      color: $blue;
+      color: $blue5;
       &--pink {
-        border-bottom: 2px solid $pink;
-        color: $pink;
+        border-bottom: 2px solid $pink5;
+        color: $pink5;
       }
       &--en {
         font-size: 3.6rem;
@@ -76,14 +77,14 @@
       left: 50%;
       width: 3rem;
       height: 3px;
-      background: $blue;
+      background: $blue5;
       transform: translateX(-50%);
       content: "";
     }
     &--pink {
-      color: $pink;
+      color: $pink5;
       &::after {
-        background: $pink;
+        background: $pink5;
       }
     }
   }
@@ -114,21 +115,21 @@
         margin: 1rem 0 0;
         font-size: 2.6rem;
         font-weight: bold;
-        color: $pink;
+        color: $pink1;
       }
     }
     &__list {
       margin: 5.6rem 0 0;
-      border-top: 1px solid $pink;
+      border-top: 1px solid $pink1;
     }
     &__link {
-      padding: 2rem 0;
-      border-bottom: 1px solid $pink;
+      padding: 2rem 0 1.5rem;
+      border-bottom: 1px solid $pink1;
       &--sub {
         display: block;
         font-size: 1.5rem;
         font-weight: bold;
-        line-height: 1;
+        line-height: 1.2;
         color: #141314;
       }
       &--main {
@@ -136,7 +137,8 @@
         margin: 0.5rem 0 0;
         font-size: 2.4rem;
         font-weight: bold;
-        color: $pink;
+        line-height: 1.6;
+        color: $pink1;
       }
     }
     &__btn {
@@ -149,28 +151,39 @@
       &__title {
         font-size: 2.5rem;
         font-weight: bold;
+        line-height: 1.45;
         color: #141314;
       }
       &__tel {
-        margin: 2rem 0 0;
-        border: 2px solid #9abcdf;
+        margin: 2.15rem 0 0;
+        border: 2px solid $blue3;
         border-radius: 0.8rem;
+        width: 100%;
+        height: 7.5rem;
         color: white;
         text-align: center;
-        background: #6f95ba;
+        background: $blue1;
       }
       &__num {
-        margin: 0 2.2rem 0 0;
+        margin: 0 2rem 0 0;
         font-size: 3.6rem;
-        font-weight: bold;
+        font-weight: 500;
+        line-height: 1;
         .icon {
+          margin-right: 0.85rem;
           font-size: 3rem;
         }
       }
       &__open {
         font-size: 1.4rem;
-        line-height: 1.1;
+        line-height: 1.2;
       }
+    }
+    @media #{$media-tab} {
+      display: none;
+    }
+    @media #{$media-sp} {
+      display: none;
     }
   }
   &SP {
@@ -179,6 +192,9 @@
     box-shadow: 0 0 3rem rgba(#820d51, 0.2);
     @media #{$media-tab} {
       margin: 0 auto;
+    }
+    @media #{$media-sp} {
+      width: 100%;
     }
   }
 
@@ -201,9 +217,99 @@
       }
     }
   }
+
+  &Bottom {
+    display: none;
+    padding: 0.9rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $pink1;
+    z-index: 999;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.45;
+    .icon {
+      margin-left: 1rem;
+      font-size: 1.4rem;
+    }
+    @media #{$media-tab} {
+      display: block;
+      width: 40rem;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media #{$media-sp} {
+      display: block;
+    }
+  }
+
+  // タブレットからスマホのみ
+  &Link {
+    display: none;
+    padding: 4rem 0;
+    background: white;
+    &Btn {
+      &Wrap {
+      }
+      &__wrap {
+        position: relative;
+        width: calc((100% - 0.5rem) / 2);
+        text-align: center;
+        line-height: 1.3;
+        .shape {
+          position: absolute;
+          &--left {
+            left: 0;
+            top: 3rem;
+          }
+          &--right {
+            right: 0;
+            top: 3rem;
+          }
+        }
+        &--blue {
+          color: $blue2;
+        }
+        &--pink {
+          color: $pink3;
+        }
+        &--underline {
+          font-size: 1.5rem;
+          font-weight: bold;
+          background: linear-gradient(transparent 70%, #ffd400 30%);
+          line-height: 1;
+        }
+      }
+      margin: 1.5rem 0 0 0;
+      position: relative;
+      height: 5rem;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      .icon {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        font-size: 1.8rem;
+        transform: translateY(-50%);
+      }
+    }
+    @media #{$media-tab} {
+      display: block;
+    }
+    @media #{$media-sp} {
+      display: block;
+    }
+  }
+  // タブレットからスマホのみ
+
   &Copy {
     position: relative;
-    padding: 6rem 0 3rem;
+    padding: 6rem 0 0rem;
     text-align: center;
     &__bg {
       position: absolute;
@@ -232,14 +338,16 @@
         }
       }
       &--line {
+        padding-bottom: 0.2rem;
         border-bottom: 2px dashed #433b3f;
+        line-height: 1.7;
       }
     }
     &__img {
       margin: 3rem 0 0;
     }
     &__msg {
-      margin: 1.6rem 0 0;
+      margin: 1.6rem 0 0.8rem;
       font-size: 2.2rem;
       line-height: 1.6;
       &--underline {
@@ -272,11 +380,12 @@
     text-align: center;
     &__bg {
       position: absolute;
-      top: -5rem;
+      top: -6rem;
       left: 0;
       z-index: -2;
       width: 100%;
-      height: calc(100% + 5rem);
+      height: calc(100% + 6rem);
+      background: white;
       img {
         width: 100%;
         height: 100%;
@@ -290,38 +399,42 @@
         border-radius: 2rem;
         width: 13.5rem;
         height: 2.3rem;
-        background: #2d4f8c;
+        background: $blue2;
         img {
           width: 9.2rem;
         }
         &.pink {
-          background: $pink;
+          background: $pink1;
         }
       }
       &--main {
         display: block;
         font-size: 3rem;
+        line-height: 1.5;
       }
       &--sub {
         display: block;
+        margin: 0.5rem 0 0;
         font-size: 1.6rem;
+        line-height: 1.5;
       }
     }
     &Copy {
       &__img {
         margin: 2.5rem 0 0;
         img {
-          border: 2px solid #88a3d0;
+          border: 2px solid $blue4;
           border-radius: 8px;
+          width: 100%;
         }
         &--pink {
           img {
-            border: 2px solid $pink;
+            border: 2px solid $pink5;
           }
         }
       }
       &__text {
-        margin: 2rem 0 0;
+        margin: 2.1rem 0 0;
         font-size: 1.8rem;
         font-weight: bold;
       }
@@ -347,6 +460,7 @@
         position: relative;
         img {
           border-radius: 1rem;
+          width: 100%;
         }
       }
       &__feature {
@@ -360,6 +474,7 @@
       }
       &__ttl {
         font-weight: bold;
+        line-height: 1.5;
         white-space: nowrap;
         &--underline {
           background: linear-gradient(transparent 60%, #ffd400 40%);
@@ -373,7 +488,7 @@
     &Spot {
       padding-top: 6.4rem;
       .commonTtl {
-        margin: 5rem 0 0 0;
+        margin: 5rem 0 0;
       }
       &__list {
         margin: 3rem 0 2rem;
@@ -391,7 +506,8 @@
           border-radius: 0.6rem 0.6rem 0 0;
         }
         .icon {
-          color: $blue;
+          margin: 0.3rem 0 0;
+          color: $blue5;
           transition-duration: 0.5s;
         }
         &:nth-child(n + 3) {
@@ -405,7 +521,7 @@
       }
       &Item {
         margin-bottom: 1.5rem;
-        border: 2px solid $blue;
+        border: 2px solid $blue6;
         border-radius: 0.8rem;
         background: #f5fdff;
         &:last-child {
@@ -414,11 +530,11 @@
         &__head {
           padding: 0.8rem 0 0.5rem;
           color: white;
-          background: $blue;
+          background: $blue6;
           &--en {
             display: block;
             font-size: 1.2rem;
-            line-height: 1;
+            line-height: 1.25;
             letter-spacing: 0.05rem;
           }
           &--spot {
@@ -448,21 +564,21 @@
           margin: 1.5rem 0 0;
           line-height: 1.6;
           &--head {
-            border: 1px solid $blue;
+            border: 1px solid $blue6;
             border-radius: 0.8rem;
             line-height: 1.5;
-            color: #2d4f8c;
+            color: $blue6;
           }
           &--ttl {
             position: relative;
             margin: 0 2rem 0 0;
-            border: 1px solid $blue;
+            border: 1px solid $blue6;
             border-radius: 0.3rem;
             width: 8rem;
             height: 3.2rem;
             font-size: 1.4rem;
             font-weight: bold;
-            color: $blue;
+            color: $blue6;
             &::after {
               position: absolute;
               top: 50%;
@@ -471,7 +587,7 @@
               border-top: 3px solid transparent;
               border-right: 0;
               border-bottom: 3px solid transparent;
-              border-left: 5px solid $blue;
+              border-left: 5px solid $blue6;
               width: 0;
               height: 0;
               transform: translate(100%, -50%);
@@ -522,7 +638,7 @@
             border-radius: 5rem;
             font-size: 1.2rem;
             color: white;
-            background: $blue;
+            background: $blue6;
           }
           &--content {
             font-size: 1rem;
@@ -538,7 +654,7 @@
     &Help {
       padding: 4rem 0 0;
       &__ttl {
-        margin: 2rem 0 0;
+        margin: 2.5rem 0 0;
         font-size: 1.8rem;
         font-weight: bold;
         line-height: 1.5;
@@ -557,7 +673,7 @@
           font-size: 1.2rem;
           line-height: 1.5;
           color: white;
-          background: $pink;
+          background: $pink5;
         }
         &__img {
           img {
@@ -575,9 +691,10 @@
         position: relative;
         margin: 3rem 0 0;
         padding: 1.6rem;
+        border-radius: 0.8rem;
         font-size: 1.5rem;
         line-height: 1.6;
-        background: white;
+        background: #fff9fd;
         &--circle {
           position: absolute;
           top: 0;
@@ -618,7 +735,7 @@
         background: white;
       }
       &--pink {
-        background: transparent;
+        // background: red;
       }
     }
     &Item {
@@ -690,6 +807,10 @@
       line-height: 1.5;
       color: #4c79c9;
       text-align: left;
+      &--pink {
+        border: 1px solid $pink5;
+        color: $pink5;
+      }
     }
   }
 
@@ -733,7 +854,8 @@
       &__btn {
         margin: 1.3rem 0 0;
         width: 25rem;
-        height: 6rem;
+        height: 5rem;
+        font-size: 1.8rem;
       }
       &__step {
         position: absolute;
@@ -742,8 +864,8 @@
         width: 6.5rem;
         height: 6.5rem;
         color: white;
-        background: #4c79c9;
-        transform: translate(-50%, -50%);
+        background: $blue5;
+        transform: translate(-50%, -65%);
         &--head {
           margin-bottom: 0.5rem;
           font-size: 1.2rem;
@@ -755,7 +877,7 @@
           line-height: 1;
         }
         &--pink {
-          background: $pink;
+          background: $pink5;
         }
       }
       &__img {
@@ -775,14 +897,16 @@
         }
         &--text {
           font-size: 1.3rem;
+          line-height: 1.5;
         }
       }
       &__down {
         margin: 1rem 0 2.5rem;
+        font-size: 1.8rem;
         font-weight: bold;
-        color: $blue;
+        color: $blue5;
         &--pink {
-          color: $pink;
+          color: $pink1;
         }
       }
     }
@@ -805,36 +929,36 @@
       &__wrap {
         width: calc((100% - 0.7rem) / 2);
         &--blue {
-          color: $blue;
+          color: $blue5;
           .topChoiceItem__copy {
             &::after {
-              background: $blue;
+              background: $blue5;
             }
             &::before {
-              background: $blue;
+              background: $blue5;
             }
           }
           .topChoiceItem__head {
-            background: $blue;
+            background: $blue5;
             &::after {
-              border-top: 8px solid $blue;
+              border-top: 8px solid $blue5;
             }
           }
         }
         &--pink {
-          color: $pink;
+          color: $pink3;
           .topChoiceItem__copy {
             &::after {
-              background: $pink;
+              background: $pink3;
             }
             &::before {
-              background: $pink;
+              background: $pink3;
             }
           }
           .topChoiceItem__head {
-            background: $pink;
+            background: $pink5;
             &::after {
-              border-top: 8px solid $pink;
+              border-top: 8px solid $pink5;
             }
           }
         }
@@ -895,6 +1019,7 @@
           margin: 0 0 1rem;
           font-size: 1.4rem;
           line-height: 1.4;
+
           &:last-child {
             margin-bottom: 0;
           }
@@ -923,15 +1048,15 @@
       padding: 1.5rem 0;
       &Wrap {
         margin: 2.5rem 0 0;
-        border-top: 2px solid $pink;
+        border-top: 2px solid $pink5;
       }
-      border-bottom: 2px solid $pink;
+      border-bottom: 2px solid $pink5;
       &__ques {
         &--head {
           margin: 0 1rem 0 0;
           font-size: 2rem;
           font-weight: normal;
-          color: $pink;
+          color: $pink5;
         }
         &--text {
           padding-right: 1rem;
@@ -942,9 +1067,19 @@
         .icon {
           margin-left: auto;
           font-size: 2rem;
-          color: $pink;
+          color: $pink5;
           &::after {
             content: "＋";
+          }
+        }
+        &.open {
+          .icon {
+            margin-left: auto;
+            font-size: 2rem;
+            color: $pink5;
+            &::after {
+              content: "－";
+            }
           }
         }
       }
@@ -958,7 +1093,7 @@
   }
 
   &Contact {
-    padding-top: 3rem;
+    padding: 3rem 0 5rem;
     background: white;
     &__ttl {
       font-size: 2.6rem;
@@ -966,19 +1101,47 @@
       line-height: 1.3;
       text-align: center;
     }
-    &Form {
-      padding: 1.5rem 1.5rem 3rem 1.5rem;
-      border-radius: 0 0 0.8rem 0.8rem;
-      &--blue {
-        border: 2px solid $blue;
-        .topContactForm__ques--req {
-          background: $blue;
+    &Tab {
+      margin: 1.4rem 0 0;
+      &Item {
+        border-radius: 0.8rem 0.8rem 0 0;
+        width: 50%;
+        height: 5rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        color: #fedd48;
+        text-align: center;
+        background: #ebebeb;
+        transition-duration: 0s;
+        &.current {
+          height: 6rem;
+        }
+        &--blue {
+          &.current {
+            background: $blue5;
+          }
+        }
+        &--pink {
+          &.current {
+            background: $pink5;
+          }
         }
       }
-      &--pink {
-        border: 2px solid $pink;
-      }
+    }
+    &Form {
+      display: none;
+      padding: 1.5rem 1.5rem 3rem;
       border-radius: 0 0 0.8rem 0.8rem;
+      border-radius: 0 0 0.8rem 0.8rem;
+      &.show {
+        display: block;
+      }
+      &--blue {
+        border: 2px solid $blue1;
+      }
+      &--pink {
+        border: 2px solid $pink5;
+      }
       &__form {
         margin: 0 0 1rem;
       }
@@ -987,15 +1150,16 @@
         &--req {
           margin: 0 0 0 1rem;
           border-radius: 1.3rem;
-          color: white;
           width: 4rem;
           height: 1.7rem;
           font-size: 1rem;
-          background: green;
+          color: white;
+          background: $blue5;
         }
       }
       &__ans {
-        margin: 0.7rem 0 0 0;
+        position: relative;
+        margin: 0.7rem 0 0;
         select,
         input,
         textarea {
@@ -1008,6 +1172,9 @@
             color: #e5e5e5;
           }
         }
+        input.zip {
+          width: 18rem;
+        }
         select {
           width: 18rem;
         }
@@ -1015,6 +1182,93 @@
           height: 13rem;
         }
       }
+      &BtnWrap {
+        text-align: center;
+      }
+      &__btn {
+        width: 30rem;
+        height: 5rem;
+      }
+      &__notice {
+        margin: 2.5rem 0 0;
+        font-size: 1.3rem;
+        color: #6a6a6a;
+        letter-spacing: 0;
+        &--head {
+          display: block;
+          margin: 0 0 1rem;
+          font-weight: bold;
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+    }
+    &__notice {
+      margin: 1.5rem 0 0;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+  }
+
+  &Tel {
+    display: none;
+    padding: 0 0 6.5rem 0;
+    position: relative;
+    &__bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      z-index: -2;
+    }
+    &__ttl {
+      position: relative;
+      font-size: 1.6rem;
+      font-weight: bold;
+      &::before {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #d8d2d2;
+        content: "";
+        z-index: -1;
+      }
+      .ttl {
+        padding: 0 1rem;
+        background: white;
+      }
+    }
+
+    &__tel {
+      margin: 2.15rem 0 0;
+      border: 2px solid $blue3;
+      border-radius: 0.8rem;
+      width: 100%;
+      height: 7.5rem;
+      color: white;
+      text-align: center;
+      background: $blue1;
+    }
+    &__num {
+      margin: 0 1.4rem 0 0;
+      font-size: 3rem;
+      .icon {
+        margin-right: 0.7rem;
+        font-size: 2.3rem;
+      }
+    }
+    &__open {
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+    @media #{$media-tab} {
+      display: block;
+    }
+    @media #{$media-sp} {
+      display: block;
     }
   }
 }

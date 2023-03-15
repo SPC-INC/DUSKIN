@@ -30,14 +30,17 @@ $headerSP: 5rem;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 9999;
   width: 100%;
   height: $headerPC;
   white-space: nowrap;
-  z-index: 9999;
   @media #{$media-tab} {
     left: 50%;
-    transform: translateX(-50%);
     width: 40rem;
+    transform: translateX(-50%);
+  }
+  &__right {
+    display: none;
   }
   &__frame {
     padding: 0 0 0 5rem;
@@ -53,6 +56,25 @@ $headerSP: 5rem;
       width: 100%;
     }
   }
+
+  @media #{$media-tab} {
+    &__logo {
+      width: 10rem;
+      img {
+        width: 100%;
+      }
+    }
+    &__right {
+      display: block;
+      width: 10rem;
+      img {
+        width: 100%;
+      }
+    }
+    &__frame {
+      padding: 0 2rem;
+    }
+  }
   /*
                ######  ########
               ##       ##     ##
@@ -62,11 +84,14 @@ $headerSP: 5rem;
   */
   // ↓sp相当幅
   @media #{$media-sp} {
+    height: $headerSP;
     max-height: 100%;
     overflow: auto;
-    height: $headerSP;
     &__frame {
-      padding: 0 2rem 0 2rem;
+      padding: 0 2rem;
+    }
+    &__right {
+      display: block;
     }
     &__logo {
       width: 7.6rem;

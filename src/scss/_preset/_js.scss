@@ -109,41 +109,41 @@ function trunk8() {
    ###    ##     ## ######## #### ########  ##     ##    ##    ########
 jQuery Validate-Engine
 */
-// .formError {
-//   //JSバリデーション用
-//   // top: auto !important;
-//   $baseColor: #cc0615;
-//   display: block;
-//   position: absolute;
-//   top: auto !important;
-//   bottom: 100%;
-//   left: auto !important;
-//   z-index: 990;
-//   margin: 0 0 0 1rem !important;
-//   line-height: 1.5;
-//   cursor: pointer;
-//   .formErrorContent {
-//     position: relative;
-//     z-index: 991;
-//     padding: 0.5rem 1rem;
-//     border-radius: 0.5rem;
-//     width: 100%;
-//     min-width: 120px;
-//     font-size: 1rem;
-//     color: #fff;
-//     letter-spacing: 0.05em;
-//     background: $baseColor;
-//   }
-//   .formErrorArrow {
-//     position: relative;
-//     z-index: 996;
-//     &::before {
-//       position: absolute;
-//       top: 100%;
-//       left: 1.5rem;
-//       z-index: 2;
-//       content: "";
-//       @include delta(5px, 5px, 5px, $baseColor, "bottom"); //三角形　（高さ,左辺,右辺,色,向き）
-//     }
-//   }
-// }
+.formError {
+  //JSバリデーション用
+  // top: auto !important;
+  $baseColor: #cc0615;
+  display: block;
+  position: absolute;
+  top: auto !important;
+  bottom: 100%;
+  left: auto !important;
+  z-index: 990;
+  margin: 0 0 0 1rem !important;
+  line-height: 1.5;
+  cursor: pointer;
+  .formErrorContent {
+    position: relative;
+    z-index: 991;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    min-width: 120px;
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.05em;
+    background: $baseColor;
+  }
+  .formErrorArrow {
+    position: relative;
+    z-index: 996;
+    &::before {
+      position: absolute;
+      top: 100%;
+      left: 1.5rem;
+      z-index: 2;
+      content: "";
+      @include delta(5px, 5px, 5px, $baseColor, "bottom"); //三角形　（高さ,左辺,右辺,色,向き）
+    }
+  }
+}

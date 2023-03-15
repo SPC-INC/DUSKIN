@@ -23,13 +23,16 @@
     <meta property="og:site_name" content="<?php $meta['sitename']; ?>" />
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="overlay" class="md-overlay"></div>
     <header id="header" class="header" itemscope="" itemtype="https://schema.org/WPHeader">
         <div class="header__frame">
-            <div class="header__base flex bet str">
+            <div class="header__base flex bet vcenter">
                 <div class="header__left flex vcenter">
                     <a class="header__logo" href="<?php echo HOME; ?>">
                         <?php echo IS_HOME ? '<h1 class="headerLogo__in">' : '<span class="headerLogo__in">'; ?>
@@ -37,7 +40,7 @@
                         <?php echo IS_HOME ?  '</h1>' : '</span>'; ?>
                     </a>
                 </div>
-                <div class="header__right sp flex vcenter">
+                <div class="header__right flex vcenter">
                     <img src="<?php echo HOME ?>img/logo2.svg" alt="">
                 </div>
             </div>

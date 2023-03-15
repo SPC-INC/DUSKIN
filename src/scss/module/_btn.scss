@@ -157,11 +157,24 @@ $mdBtnAnime: 0.5s;
       background-color: $textcolor;
     }
   }
-  &.pink {
-    $btncolor: $siteColor;
+  &.blue {
+    $btncolor: $blue6;
     $textcolor: #fff;
     color: $textcolor;
     background-color: $btncolor;
+  }
+  &.li-pink {
+    $btncolor: $pink5;
+    $textcolor: #fff;
+    color: $textcolor;
+    background-color: $btncolor;
+  }
+  &.pink {
+    $btncolor: $pink1;
+    $textcolor: #fff;
+    border: 2px solid $li-pink1;
+    color: $textcolor;
+    background-color: $pink1;
   }
   &.shine {
     // transition-duration: 0;

@@ -9,6 +9,16 @@
 
 $(function () {
   $('.js-ques-open').click(function () {
+    $(this).toggleClass('open')
     $(this).next('.js-ques-content').slideToggle()
+  })
+
+  $('.js-form-tab').click(function () {
+    let href = $(this).attr('href')
+    $('.js-form-tab').removeClass('current')
+    $(this).addClass('current')
+    $('.js-form').removeClass('show')
+    $('#form-' + href).addClass('show')
+    return false
   })
 })

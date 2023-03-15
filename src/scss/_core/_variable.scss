@@ -24,10 +24,22 @@ $serif: "Noto Serif JP", Yu Mincho, YuMincho, Hiragino Mincho ProN, "NotoSerifCJ
 $siteColor: #d91186;
 $fontColor: #141314;
 $borderColor: #e6e6e6;
-$blue: #4c79c9;
-$pink: #e4567e;
+
+$blue1: #6f95ba;
+$blue2: #2d4f8c;
+$blue3: #9abcdf;
+$blue4: #88a3d0;
+$blue5: #4c79c9;
+$blue6: #5e87cf;
+
+$pink1: #d50080;
 $pink2: #d91186;
 $pink3: #d82c90;
+$pink4: #d82c90;
+$pink5: #e4567e;
+
+$li-pink1: #f16aa6;
+
 $twitterColor: #1da1f2;
 $facebookColor: #1778f2;
 $lineColor: #00b900;
@@ -73,7 +85,7 @@ $vw70px: 21.875vw;
 $site-width: 1200px; //サイト幅
 $pc-width: 1024px; //PC解像度
 $tab-width: 769px; //TAB解像度
-$sp-width: 768px; //SP解像度
+$sp-width: 500px; //SP解像度
 $media-port: "screen and (orientation:portrait)"; //ポートレート
 $media-land: "screen and (orientation:landscape)"; //ランドスケープ
 $media-full: "screen and (min-width:#{$site-width})"; //想定最大幅
