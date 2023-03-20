@@ -5,3 +5,50 @@
   &__sub {
   }
 }
+
+/* モーダルCSS */
+.modal {
+  &Wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10001;
+    border-radius: 1.5rem;
+    width: 60rem;
+    text-align: center;
+    background: white;
+    transform: translate(-50%, -50%);
+    @media #{$media-sp} {
+      width: calc(100% - 4rem);
+    }
+  }
+
+  &Contents {
+    padding: 8rem 0;
+    &__img {
+    }
+    &__title {
+      margin: 2rem 0 0;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    &__para {
+      margin: 2.2rem 0 0;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
+  &Close {
+    padding: 1.7rem 0;
+    border-radius: 0 0 1.5rem 1.5rem;
+    background: #dfdfdf;
+    &__btn {
+      border: 1px solid #d1d1d1;
+      border-radius: 0.4rem;
+      width: 7rem;
+      height: 3rem;
+      font-weight: 500;
+      background: white;
+    }
+  }
+}

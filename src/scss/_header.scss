@@ -39,6 +39,9 @@ $headerSP: 5rem;
     width: 40rem;
     transform: translateX(-50%);
   }
+  @media #{$media-sp} {
+    position: absolute;
+  }
   &__right {
     display: none;
   }

@@ -176,31 +176,31 @@ $mdBtnAnime: 0.5s;
     color: $textcolor;
     background-color: $pink1;
   }
-  &.shine {
-    // transition-duration: 0;
-    &::before {
-      /*絶対配置でキラッと光るの位置を決める*/
-      position: absolute;
-      top: 0;
-      left: -75%;
-      /*キラッと光る形状*/
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-      transform: skewX(-25deg);
-      content: "";
-    }
-    &:hover::before {
-      animation: shine 0.6s;
-    }
-  }
-  /*hoverした際の移動のアニメーション*/
+  // &.shine {
+  //   // transition-duration: 0;
+  //   &::before {
+  //     /*絶対配置でキラッと光るの位置を決める*/
+  //     position: absolute;
+  //     top: 0;
+  //     left: -75%;
+  //     /*キラッと光る形状*/
+  //     width: 50%;
+  //     height: 100%;
+  //     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+  //     transform: skewX(-25deg);
+  //     content: "";
+  //   }
+  //   &:hover::before {
+  //     animation: shine 0.6s;
+  //   }
+  // }
+  // /*hoverした際の移動のアニメーション*/
 
-  @keyframes shine {
-    100% {
-      left: 125%;
-    }
-  }
+  // @keyframes shine {
+  //   100% {
+  //     left: 125%;
+  //   }
+  // }
 }
 
 /*

@@ -7,6 +7,10 @@ $page = array( // ページデータ
 );
 require_once $include . '_header.php';
 ?>
+
+
+
+
 <article class="contents contents--<?php echo IS_PAGE; ?>">
     <div class="top__bg">
         <img src="<?php echo HOME ?>img/top_bg.png" alt="">
@@ -43,7 +47,7 @@ require_once $include . '_header.php';
                     <i class="icon icon-right"></i>
                 </a>
             </div>
-            <a class="topLeft__btn shine md-btn pink" href="#topContact">
+            <a class="topLeft__btn op md-btn pink" href="#topContact">
                 無料相談・お見積りはこちら
             </a>
 
@@ -68,7 +72,9 @@ require_once $include . '_header.php';
                 <i class="icon icon-down"></i>
             </a>
             <section class="topMv">
-                <img src="<?php echo HOME ?>img/top_mv.png" alt="">
+                <div class="topMv__img">
+                    <img src="<?php echo HOME ?>img/top_mv.png" alt="">
+                </div>
                 <div class="topMv__bottom">
                     <img src="<?php echo HOME ?>img/merry_maids_white.svg" alt="" class="topMv__bottom--logo">
                     <span class="topMv__bottom--head">
@@ -94,7 +100,7 @@ require_once $include . '_header.php';
                             <span class="topLinkBtn__wrap--underline">
                                 あなたへ
                             </span>
-                            <a href="#topServiceSouji" class="topLinkBtn md-btn btn blue shine">
+                            <a href="#topServiceSouji" class="topLinkBtn md-btn btn blue op">
                                 お掃除おまかせ<br>
                                 サービス
                                 <i class="icon icon-anchor"></i>
@@ -114,7 +120,7 @@ require_once $include . '_header.php';
                             <span class="topLinkBtn__wrap--underline">
                                 あなたへ
                             </span>
-                            <a href="#topServiceKaji" class="topLinkBtn md-btn btn li-pink shine">
+                            <a href="#topServiceKaji" class="topLinkBtn md-btn btn li-pink op">
                                 家事おてつだい<br>
                                 サービス
                                 <i class="icon icon-anchor"></i>
@@ -415,57 +421,55 @@ require_once $include . '_header.php';
                     <img src="<?php echo HOME ?>img/voice_bg.png" alt="" class="pc">
                     <img src="<?php echo HOME ?>img/voice_bg_sp.png" alt="" class="sp">
                 </div>
+                <div class="commonHead">
+                    <div class="commonHead__head noline">
+                        <span class="commonHead__head--inner">
+                            お掃除おまかせサービス
+                        </span>
+                    </div>
+                    <div class="commonHead__ttl commonHead__ttl--nobd">
+                        <div class="commonHead__ttl--en">
+                            USER’S VOICE
+                        </div>
+                        <div class="commonHead__ttl--ja">
+                            お客様の声
+                        </div>
+                    </div>
+                </div>
+                <div class="topVoiceItemWrap">
+                    <?php $list = array(
+                        array(
+                            'text' => '浴室クリーニングのオプションで、換気扇や、パッキンのカビなどを依頼しました。とても、綺麗になりプロの力を感じました。過剰なセールストークもなく、薬剤を使用したあとの換気指導、日常の掃除方法などをアドバイスしてくださり、とても助かりました。<br>決して安い料金では、ありませんが、プロ意識を持って、真摯に対応してくださったので、お願いしてよかったとおもいました。'
+                        ),
+                        array(
+                            'text' => '実家の浴室がカビなどが酷く、放置される事でかなり汚れており、自分で綺麗に出来る自信がありませんでした。手軽に申し込める金額ではないので悩みに悩みましたが、結果は大満足。こんなにも綺麗になるのですね。こういうサービスを利用するのが初めてだったのでどこを選んでいいかわからず、有名だという理由だけで選びましたが、従業員さんの対応含め大満足。<br>本当にありがとうございます。'
+                        ),
+                        array(
+                            'text' => 'かなり年季の入った汚れだったため、「完璧にキレイにはならないかもしれない」と予防線を張っておられましたが、なんのなんの！あっという間にキレイにしてくださってビックリしました。確かに変色してしまった部分は取れませんでしたが、想像以上の仕上がりでした。さすがプロだなぁと感心しました。もっと早く頼めば良かったです。今後は浴室もキッチンもお願いしたいと思っています。ありがとうございました。'
+                        ),
+                    );
+                    $num = 0;
+                    foreach ($list as $key => $value) {
+                        $num++;
+                    ?>
+                        <div class="topVoiceItem flex bet">
+                            <div class="topVoiceItem__img">
+                                <img src="<?php echo HOME ?>img/voice_0<?php echo $num; ?>.svg" alt="">
+                            </div>
+                            <div class="topVoiceItem__text">
+                                <?php echo $value['text']; ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
                 <div class="wrap sp-wrap">
-                    <div class="commonHead">
-                        <div class="commonHead__head noline">
-                            <span class="commonHead__head--inner">
-                                お掃除おまかせサービス
-                            </span>
-                        </div>
-                        <div class="commonHead__ttl commonHead__ttl--nobd">
-                            <div class="commonHead__ttl--en">
-                                USER’S VOICE
-                            </div>
-                            <div class="commonHead__ttl--ja">
-                                お客様の声
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topVoiceItemWrap">
-                        <?php $list = array(
-                            array(
-                                'text' => '浴室クリーニングのオプションで、換気扇や、パッキンのカビなどを依頼しました。とても、綺麗になりプロの力を感じました。過剰なセールストークもなく、薬剤を使用したあとの換気指導、日常の掃除方法などをアドバイスしてくださり、とても助かりました。<br>決して安い料金では、ありませんが、プロ意識を持って、真摯に対応してくださったので、お願いしてよかったとおもいました。'
-                            ),
-                            array(
-                                'text' => '実家の浴室がカビなどが酷く、放置される事でかなり汚れており、自分で綺麗に出来る自信がありませんでした。手軽に申し込める金額ではないので悩みに悩みましたが、結果は大満足。こんなにも綺麗になるのですね。こういうサービスを利用するのが初めてだったのでどこを選んでいいかわからず、有名だという理由だけで選びましたが、従業員さんの対応含め大満足。<br>本当にありがとうございます。'
-                            ),
-                            array(
-                                'text' => 'かなり年季の入った汚れだったため、「完璧にキレイにはならないかもしれない」と予防線を張っておられましたが、なんのなんの！あっという間にキレイにしてくださってビックリしました。確かに変色してしまった部分は取れませんでしたが、想像以上の仕上がりでした。さすがプロだなぁと感心しました。もっと早く頼めば良かったです。今後は浴室もキッチンもお願いしたいと思っています。ありがとうございました。'
-                            ),
-                        );
-                        $num = 0;
-                        foreach ($list as $key => $value) {
-                            $num++;
-                        ?>
-                            <div class="topVoiceItem flex bet">
-                                <div class="topVoiceItem__img">
-                                    <img src="<?php echo HOME ?>img/voice_0<?php echo $num; ?>.svg" alt="">
-                                </div>
-                                <div class="topVoiceItem__text">
-                                    <?php echo $value['text']; ?>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
                     <p class="topVoice__notice">
                         出典：ダスキンユーザー(DDuet会員)の商品・サービスレビュー2022年1月以降より
                     </p>
                 </div>
             </section>
 
-
-            <section class="topFlow">
-                <div class="topFlow__bg"></div>
+            <section class="topText">
                 <div class="wrap sp-wrap">
                     <p class="topFlow__text">
                         ※表示料金は消費税率10％を含む総額表示です。<br>
@@ -477,6 +481,13 @@ require_once $include . '_header.php';
                         ※土・日・祝日のサービスに関しましては、お受けできないことがございます。<br>
                         ※写真・イラストはイメージです。
                     </p>
+                </div>
+            </section>
+
+
+            <section class="topFlow">
+                <div class="topFlow__bg"></div>
+                <div class="wrap sp-wrap">
                     <div class="commonHead">
                         <div class="commonHead__head">
                             <span class="commonHead__head--inner">
@@ -525,7 +536,7 @@ require_once $include . '_header.php';
                                         <div class="topFlowItem__ttl">
                                             <?php echo $value['ttl']; ?>
                                         </div>
-                                        <a class="topFlowItem__btn shine md-btn pink" href="#topContact">
+                                        <a class="topFlowItem__btn op md-btn pink" href="#topContact">
                                             <?php echo $value['btn-text']; ?>
                                         </a>
                                     </div>
@@ -547,6 +558,27 @@ require_once $include . '_header.php';
                                 <i class="topFlowItem__down icon icon-down"></i>
                             <?php } ?>
                         <?php } ?>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="topTel">
+                <div class="topTel__bg"></div>
+                <div class="topTel__ttl flex vcenter bet">
+                    <span class="topTel__ttl--line"></span>
+                    <span class="ttl">電話で無料相談・お見積りはこちら</span>
+                    <span class="topTel__ttl--line"></span>
+                </div>
+                <div class="sp-wrap">
+                    <div class="topTel__tel flex bet hcenter vcenter">
+                        <span class="topTel__num flex vcenter robo">
+                            <i class="icon icon-phone"></i>
+                            0120-000-000
+                        </span>
+                        <span class="topTel__open">
+                            8:00～20:00<br>年中無休
+                        </span>
                     </div>
                 </div>
             </section>
@@ -726,59 +758,127 @@ require_once $include . '_header.php';
 
             <section class="topVoice">
                 <div class="topVoice__bg topVoice__bg--pink"></div>
+
+                <div class="commonHead">
+                    <div class="commonHead__head noline">
+                        <span class="commonHead__head--inner pink">
+                            家事おてつだいサービス
+                        </span>
+                    </div>
+                    <div class="commonHead__ttl commonHead__ttl--nobd commonHead__ttl--pink">
+                        <div class="commonHead__ttl--en">
+                            USER’S VOICE
+                        </div>
+                        <div class="commonHead__ttl--ja">
+                            お客様の声
+                        </div>
+                    </div>
+                </div>
+                <div class="topVoiceItemWrap">
+                    <?php $list = array(
+                        array(
+                            'text' => 'ちょっと無理かな、と思うような庭の物置の中や、散らかったリビングダイニングまで、とても綺麗に整理・掃除いただきました。トイレも、お掃除していただいた後はとてもすっきりとして気持ちよく使えます。仕事に行っている間に家事代行をしてもらっているので、帰宅するのが楽しみです。'
+                        ),
+                        array(
+                            'text' => '何社か同じようなサービスのところでお試しサービスをやってみました。結果、圧倒的にお掃除の仕方や出来が素晴らしいのがダスキンさんでした。最初に営業の方に伝えたことも、実際お掃除する方にきちんと引き継がれていましたし、さすが本業。お掃除に関してはプロ！他の家事代行さんとは違って、掃除の仕方やお風呂、エアコン、レンジフードなど見ただけでお掃除で気をつけるポイントなど知っていて感激しました。家事代行に何を求めるかによって選ぶポイントは違うと思いますが、お掃除に関してはポイント高いです。'
+                        ),
+                        array(
+                            'text' => '初めて利用させて頂きましたが、担当の方の人柄に惹かれた部分がすごく大きかったです！<br>安心してお任せできそうなのでこれからが楽しみです。'
+                        ),
+                    );
+                    $num = 0;
+                    foreach ($list as $key => $value) {
+                        $num++;
+                    ?>
+                        <div class="topVoiceItem flex bet">
+                            <div class="topVoiceItem__img">
+                                <img src="<?php echo HOME ?>img/voice_2_0<?php echo $num; ?>.svg" alt="">
+                            </div>
+                            <div class="topVoiceItem__text topVoiceItem__text--white">
+                                <?php echo $value['text']; ?>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
                 <div class="wrap sp-wrap">
-                    <div class="commonHead">
-                        <div class="commonHead__head noline">
-                            <span class="commonHead__head--inner pink">
-                                家事おてつだいサービス
-                            </span>
-                        </div>
-                        <div class="commonHead__ttl commonHead__ttl--nobd commonHead__ttl--pink">
-                            <div class="commonHead__ttl--en">
-                                USER’S VOICE
-                            </div>
-                            <div class="commonHead__ttl--ja">
-                                お客様の声
-                            </div>
-                        </div>
-                    </div>
-                    <div class="topVoiceItemWrap">
-                        <?php $list = array(
-                            array(
-                                'text' => 'ちょっと無理かな、と思うような庭の物置の中や、散らかったリビングダイニングまで、とても綺麗に整理・掃除いただきました。トイレも、お掃除していただいた後はとてもすっきりとして気持ちよく使えます。仕事に行っている間に家事代行をしてもらっているので、帰宅するのが楽しみです。'
-                            ),
-                            array(
-                                'text' => '何社か同じようなサービスのところでお試しサービスをやってみました。結果、圧倒的にお掃除の仕方や出来が素晴らしいのがダスキンさんでした。最初に営業の方に伝えたことも、実際お掃除する方にきちんと引き継がれていましたし、さすが本業。お掃除に関してはプロ！他の家事代行さんとは違って、掃除の仕方やお風呂、エアコン、レンジフードなど見ただけでお掃除で気をつけるポイントなど知っていて感激しました。家事代行に何を求めるかによって選ぶポイントは違うと思いますが、お掃除に関してはポイント高いです。'
-                            ),
-                            array(
-                                'text' => '初めて利用させて頂きましたが、担当の方の人柄に惹かれた部分がすごく大きかったです！<br>安心してお任せできそうなのでこれからが楽しみです。'
-                            ),
-                        );
-                        $num = 0;
-                        foreach ($list as $key => $value) {
-                            $num++;
-                        ?>
-                            <div class="topVoiceItem flex bet">
-                                <div class="topVoiceItem__img">
-                                    <img src="<?php echo HOME ?>img/voice_2_0<?php echo $num; ?>.svg" alt="">
-                                </div>
-                                <div class="topVoiceItem__text topVoiceItem__text--white">
-                                    <?php echo $value['text']; ?>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
                     <p class="topVoice__notice topVoice__notice--pink">
                         出典：ダスキンユーザー(DDuet会員)の商品・サービスレビュー2022年1月以降より
                     </p>
                 </div>
             </section>
 
-
-            <section class="topFlow">
-                <div class="topFlow__bg"></div>
+            <section class="topPrice">
                 <div class="wrap sp-wrap">
-                    <p class="topFlow__text">
+                    <div class="topPriceItem">
+                        <div class="topPriceItem__head">
+                            サービス標準料金
+                        </div>
+                        <div class="topPriceItemContent">
+                            <div class="topPriceItem__ttl">
+                                家事おてつだいサービス
+                            </div>
+                            <div class="topPriceItemPointWrap">
+                                <div class="topPriceItemPointWrap__ttl">
+                                    例えば2時間で...
+                                </div>
+                                <div class="topPriceItemPoints flex">
+                                    <div class="topPriceItemPoint">
+                                        <img src="<?php echo HOME ?>img/point_01.png" alt="">
+                                        掃除機掛け
+                                    </div>
+                                    <div class="topPriceItemPoint">
+                                        <img src="<?php echo HOME ?>img/point_02.png" alt="">
+                                        拭き掃除
+                                    </div>
+                                    <div class="topPriceItemPoint">
+                                        <img src="<?php echo HOME ?>img/point_03.png" alt="">
+                                        食器洗い
+                                    </div>
+                                    <div class="topPriceItemPoint">
+                                        <img src="<?php echo HOME ?>img/point_04.png" alt="">
+                                        洗濯物干し
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="topPriceItem__time">
+                                スタッフ1名／2時間
+                            </div>
+                            <div class="topPriceItem__price flex vcenter">
+                                <span class="topPriceItem__price--head flex vcenter hcenter">
+                                    定期
+                                </span>
+                                <span class="topPriceItem__price--num">
+                                    7,700
+                                </span>
+                                <span class="topPriceItem__price--small">
+                                    円(税抜7,000円)
+                                </span>
+                            </div>
+                            <div class="topPriceItem__price small flex vcenter">
+                                <span class="topPriceItem__price--head small flex vcenter hcenter">
+                                    1回のみ
+                                </span>
+                                <span class="topPriceItem__price--num small">
+                                    11,000
+                                </span>
+                                <span class="topPriceItem__price--small small">
+                                    円(税抜10,000円)
+                                </span>
+                            </div>
+                            <p class="topPriceItem__text">
+                                <span class="topPriceItem__text--notice">
+                                    ※対象条件や地域別料金はコチラ
+                                </span>
+                                ダスキンのスタッフがご自宅にお伺いし、<br>
+                                無料でお見積りいたします。<br>
+                                まずは、お気軽にご相談ください。
+                            </p>
+                            <a class="topPriceItem__btn op md-btn pink" href="#topContact">
+                                無料相談・お見積りはこちら
+                            </a>
+                        </div>
+                    </div>
+                    <p class="topPrice__text">
                         ※表示料金は消費税率10％を含む総額表示です。<br>
                         ※サービスは、予告なしにデザインや仕様、料金の変更や販売を中止することがございますので、ご了承ください。<br>
                         ※1回2時間（延長はご要望に応じて）より、ご希望の家事を組み合わせてご利用いただけます。<br>
@@ -791,6 +891,13 @@ require_once $include . '_header.php';
                         ※土・日・祝日のサービスに関しましては、お受けできないことがございます。<br>
                         ※写真・イラストはイメージです。
                     </p>
+                </div>
+            </section>
+
+
+            <section class="topFlow">
+                <div class="topFlow__bg"></div>
+                <div class="wrap sp-wrap">
                     <div class="commonHead">
                         <div class="commonHead__head commonHead__head--pink">
                             <span class="commonHead__head--inner pink">
@@ -839,7 +946,7 @@ require_once $include . '_header.php';
                                         <div class="topFlowItem__ttl">
                                             <?php echo $value['ttl']; ?>
                                         </div>
-                                        <a class="topFlowItem__btn shine md-btn pink" href="#topContact">
+                                        <a class="topFlowItem__btn op md-btn pink" href="#topContact">
                                             <?php echo $value['btn-text']; ?>
                                         </a>
                                     </div>
@@ -882,7 +989,7 @@ require_once $include . '_header.php';
                                 'color' => 'blue',
                             ),
                             array(
-                                'copy' => 'きれいに<br>こだわりたいあなたへ',
+                                'copy' => '家事の負担を<br>軽減したいあなたへ',
                                 'ttl' => '家事おてつだい<br>サービス',
                                 'point1' => '家事全般を<br>お手伝い',
                                 'point2' => '時間の中でさまざまな家事を代行',
@@ -1124,7 +1231,7 @@ require_once $include . '_header.php';
                                 </div>
                             </div>
                             <div class="topContactFormBtnWrap">
-                                <button class="topContactForm__btn btn md-btn pink" type="submit">
+                                <button class="topContactForm__btn btn md-btn pink op" type="submit">
                                     見積りを依頼する
                                 </button>
                             </div>

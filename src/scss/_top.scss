@@ -200,6 +200,11 @@
 
   &Mv {
     position: relative;
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
     &__bottom {
       position: absolute;
       bottom: -1rem;
@@ -220,27 +225,27 @@
 
   &Bottom {
     display: none;
-    padding: 0.9rem;
     position: fixed;
-    left: 0;
     bottom: 0;
-    width: 100%;
-    background: $pink1;
+    left: 0;
     z-index: 999;
-    color: white;
+    padding: 0.9rem;
+    width: 100%;
     font-size: 2.2rem;
     font-weight: bold;
-    text-align: center;
     line-height: 1.45;
+    color: white;
+    text-align: center;
+    background: $pink1;
     .icon {
       margin-left: 1rem;
       font-size: 1.4rem;
     }
     @media #{$media-tab} {
       display: block;
-      width: 40rem;
       bottom: 0;
       left: 50%;
+      width: 40rem;
       transform: translateX(-50%);
     }
     @media #{$media-sp} {
@@ -259,17 +264,17 @@
       &__wrap {
         position: relative;
         width: calc((100% - 0.5rem) / 2);
-        text-align: center;
         line-height: 1.3;
+        text-align: center;
         .shape {
           position: absolute;
           &--left {
-            left: 0;
             top: 3rem;
+            left: 0;
           }
           &--right {
-            right: 0;
             top: 3rem;
+            right: 0;
           }
         }
         &--blue {
@@ -281,12 +286,12 @@
         &--underline {
           font-size: 1.5rem;
           font-weight: bold;
-          background: linear-gradient(transparent 70%, #ffd400 30%);
           line-height: 1;
+          background: linear-gradient(transparent 70%, #ffd400 30%);
         }
       }
-      margin: 1.5rem 0 0 0;
       position: relative;
+      margin: 1.5rem 0 0;
       height: 5rem;
       font-size: 1.4rem;
       line-height: 1.4;
@@ -740,9 +745,10 @@
     }
     &Item {
       &Wrap {
-        margin-bottom: 2rem;
+        margin: 2rem 0;
       }
       margin-bottom: 2.5rem;
+      padding-left: 1.4rem;
       &:last-child {
         margin-bottom: 0;
       }
@@ -777,12 +783,14 @@
         }
       }
       &:nth-child(even) {
+        padding-right: 1.4rem;
+        padding-left: 0;
         .topVoiceItem__img {
           order: 2;
         }
         .topVoiceItem__text {
           order: 1;
-          border-radius: 0.8rem 0 0 0.8rem;
+          border-radius: 0 0.8rem 0.8rem 0;
           &::after {
             position: absolute;
             right: 0;
@@ -814,10 +822,180 @@
     }
   }
 
+  &Price {
+    padding: 3rem 0 0;
+    background: white;
+    &Item {
+      border: 2px solid $pink5;
+      border-radius: 0.8rem;
+      text-align: center;
+      background: white;
+      &Content {
+        padding: 2rem 1.5rem;
+      }
+      &__head {
+        padding: 1rem 0;
+        font-size: 2.2rem;
+        font-weight: bold;
+        line-height: 1.4;
+        color: white;
+        text-align: center;
+        background: $pink5;
+      }
+      &__ttl {
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 1;
+        color: $pink5;
+      }
+      &PointWrap {
+        position: relative;
+        margin: 1.5rem 0 0;
+        padding: 0.6rem;
+        border-radius: 0.4rem;
+        background: #f2f2f2;
+        &__ttl {
+          font-size: 1.4rem;
+          font-weight: bold;
+        }
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          border-style: solid;
+          border-top: 12px solid #f2f2f2;
+          border-right: 8px solid transparent;
+          border-bottom: 0;
+          border-left: 8px solid transparent;
+          width: 0;
+          height: 0;
+          transform: translate(-50%, 100%);
+          content: "";
+        }
+      }
+      &Point {
+        font-size: 1.1rem;
+        background: white;
+      }
+      &__time {
+        margin: 2rem 0 1.2rem;
+        border-radius: 0.5rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1.5;
+        color: white;
+        background: $pink5;
+      }
+      &__price {
+        margin: 0.8rem 0 0;
+        font-weight: bold;
+        line-height: 1;
+        &:first {
+          margin-top: 0;
+        }
+        &--head {
+          position: relative;
+          margin: 0 2rem 0 0;
+          border: 1px solid $pink5;
+          border-radius: 0.3rem;
+          width: 8rem;
+          height: 3.2rem;
+          font-size: 1.4rem;
+          color: $pink5;
+          text-align: center;
+          &.small {
+            border: 1px solid #a49f9f;
+            height: 2.2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #a49f9f;
+          }
+          &::after,
+          &::before {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            border-style: solid;
+            border-right: 0;
+            width: 0;
+            height: 0;
+            transform: translate(100%, -50%);
+            content: "";
+          }
+          &::before {
+            z-index: 1;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            border-left: 3px solid white;
+          }
+          &::after {
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 5px solid $pink5;
+          }
+          &.small {
+            &::after {
+              border-left: 5px solid #a49f9f;
+            }
+          }
+        }
+        &--num {
+          margin: 0 0.5rem 0 0;
+          font-size: 2.9rem;
+          &.small {
+            font-size: 1.5rem;
+          }
+        }
+        &--small {
+          font-size: 1.4rem;
+          &.small {
+            font-size: 1rem;
+          }
+        }
+      }
+      &__text {
+        margin: 1.2rem 0 0;
+        font-size: 1.4rem;
+        font-weight: 500;
+        &--notice {
+          display: block;
+          margin: 0 0 0.7rem;
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #4c89bf;
+        }
+      }
+      &__btn {
+        margin: 1.5rem 0 0;
+        height: 5rem;
+      }
+    }
+
+    &__text {
+      margin: 2rem 0 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #6a6a6a;
+      text-align: left;
+    }
+  }
+
+  &Text {
+    padding: 2rem 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #6a6a6a;
+    text-align: left;
+    background: white;
+  }
+
   &Flow {
     position: relative;
-    padding: 2rem 0 5rem;
+    padding: 5rem 0;
     text-align: center;
+
+    &__text {
+    }
     &__bg {
       position: absolute;
       top: 0;
@@ -827,13 +1005,7 @@
       height: 100%;
       background: #ffffff;
     }
-    &__text {
-      margin: 0 0 5rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #6a6a6a;
-      text-align: left;
-    }
+
     &Item {
       &Wrap {
         margin: 5rem 0 0;
@@ -1109,12 +1281,13 @@
         height: 5rem;
         font-size: 1.5rem;
         line-height: 1.3;
-        color: #fedd48;
+        color: #a49f9f;
         text-align: center;
         background: #ebebeb;
         transition-duration: 0s;
         &.current {
           height: 6rem;
+          color: #fedd48;
         }
         &--blue {
           &.current {
@@ -1213,16 +1386,16 @@
 
   &Tel {
     display: none;
-    padding: 0 0 6.5rem 0;
     position: relative;
+    padding: 0 0 4rem;
     &__bg {
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
+      z-index: -2;
       width: 100%;
       height: 100%;
       background: white;
-      z-index: -2;
     }
     &__ttl {
       position: relative;
@@ -1230,11 +1403,11 @@
       font-weight: bold;
       &::before {
         position: absolute;
+        z-index: -1;
         width: 100%;
         height: 1px;
         background: #d8d2d2;
         content: "";
-        z-index: -1;
       }
       .ttl {
         padding: 0 1rem;
