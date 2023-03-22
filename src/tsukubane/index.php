@@ -1116,7 +1116,7 @@ require_once $include . '_header.php';
                         </a>
                     </div>
                     <div class="topContactForm topContactForm--blue js-form show" id="form-clean">
-                        <form action="<?php echo HOME; ?>mail.php" method="post">
+                        <form action="<?php echo HOME; ?>tsukubane/mail.php" method="post">
                             <input type="text" hidden name="サービス内容" value="お掃除おまかせサービス">
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
