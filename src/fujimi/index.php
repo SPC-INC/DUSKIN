@@ -1,21 +1,19 @@
 <?php
-$include = './include/'; // パーツ用パス
-$home = './'; // サイトルートパス
+$include = '../include/'; // パーツ用パス
+$home = '../'; // サイトルートパス
 $page = array( // ページデータ
-    'flag' => 'top', // ページ判別フラグ
+    'flag' => 'fujimi', // ページ判別フラグ
     'slug' => '', // TOP以降のURL 末尾の/や拡張子まで含める
 );
 require_once $include . '_header.php';
 ?>
-
 <?php
 //
-//  #####     ###     ####  #####
-//  ##  ##   ## ##   ##     ##
-//  #####   ##   ##   ###   #####
-//  ##  ##  #######     ##  ##
-//  #####   ##   ##  ####   #####
-//
+//  #####  ##   ##      ##  ##  ###    ###  ##
+//  ##     ##   ##      ##  ##  ## #  # ##  ##
+//  #####  ##   ##      ##  ##  ##  ##  ##  ##
+//  ##     ##   ##  ##  ##  ##  ##      ##  ##
+//  ##      #####    ####   ##  ##      ##  ##
 ?>
 <article class="contents contents--<?php echo IS_PAGE; ?>">
     <div class="top__bg">
@@ -64,7 +62,7 @@ require_once $include . '_header.php';
                 <div class="topLeftInfo__tel flex bet hcenter vcenter">
                     <span class="topLeftInfo__num flex vcenter robo">
                         <i class="icon icon-phone"></i>
-                        0120-000-000
+                        0120-455-344
                     </span>
                     <span class="topLeftInfo__open">
                         8:00～20:00<br>年中無休
@@ -581,7 +579,7 @@ require_once $include . '_header.php';
                     <div class="topTel__tel flex bet hcenter vcenter">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            0120-000-000
+                            0120-455-344
                         </span>
                         <span class="topTel__open">
                             8:00～20:00<br>年中無休
@@ -855,10 +853,10 @@ require_once $include . '_header.php';
                                     定期
                                 </span>
                                 <span class="topPriceItem__price--num">
-                                    7,700
+                                    9,900
                                 </span>
                                 <span class="topPriceItem__price--small">
-                                    円(税抜7,000円)
+                                    円(税抜9,000円)
                                 </span>
                             </div>
                             <div class="topPriceItem__price small flex vcenter">
@@ -1402,7 +1400,7 @@ require_once $include . '_header.php';
                     <div class="topTel__tel flex bet hcenter vcenter">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            0120-000-000
+                            0120-455-344
                         </span>
                         <span class="topTel__open">
                             8:00～20:00<br>年中無休

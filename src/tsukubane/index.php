@@ -1,8 +1,8 @@
 <?php
-$include = './include/'; // パーツ用パス
-$home = './'; // サイトルートパス
+$include = '../include/'; // パーツ用パス
+$home = '../'; // サイトルートパス
 $page = array( // ページデータ
-    'flag' => 'top', // ページ判別フラグ
+    'flag' => 'tsukubane', // ページ判別フラグ
     'slug' => '', // TOP以降のURL 末尾の/や拡張子まで含める
 );
 require_once $include . '_header.php';
@@ -10,11 +10,11 @@ require_once $include . '_header.php';
 
 <?php
 //
-//  #####     ###     ####  #####
-//  ##  ##   ## ##   ##     ##
-//  #####   ##   ##   ###   #####
-//  ##  ##  #######     ##  ##
-//  #####   ##   ##  ####   #####
+//  ######   ####  ##   ##  ##  ##  ##   ##  #####     ###    ##     ##  #####
+//    ##    ##     ##   ##  ## ##   ##   ##  ##  ##   ## ##   ####   ##  ##
+//    ##     ###   ##   ##  ####    ##   ##  #####   ##   ##  ##  ## ##  #####
+//    ##       ##  ##   ##  ## ##   ##   ##  ##  ##  #######  ##    ###  ##
+//    ##    ####    #####   ##  ##   #####   #####   ##   ##  ##     ##  #####
 //
 ?>
 <article class="contents contents--<?php echo IS_PAGE; ?>">
@@ -64,7 +64,7 @@ require_once $include . '_header.php';
                 <div class="topLeftInfo__tel flex bet hcenter vcenter">
                     <span class="topLeftInfo__num flex vcenter robo">
                         <i class="icon icon-phone"></i>
-                        0120-000-000
+                        045-489-3663
                     </span>
                     <span class="topLeftInfo__open">
                         8:00～20:00<br>年中無休
@@ -581,7 +581,7 @@ require_once $include . '_header.php';
                     <div class="topTel__tel flex bet hcenter vcenter">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            0120-000-000
+                            045-489-3663
                         </span>
                         <span class="topTel__open">
                             8:00～20:00<br>年中無休
@@ -1402,7 +1402,7 @@ require_once $include . '_header.php';
                     <div class="topTel__tel flex bet hcenter vcenter">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            0120-000-000
+                            045-489-3663
                         </span>
                         <span class="topTel__open">
                             8:00～20:00<br>年中無休
