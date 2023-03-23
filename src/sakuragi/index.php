@@ -577,7 +577,7 @@ require_once $include . '_header.php';
                     <span class="topTel__ttl--line"></span>
                 </div>
                 <div class="sp-wrap">
-                    <div class="topTel__tel flex bet hcenter vcenter">
+                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0120-388-093">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
                             0120-388-093
@@ -585,7 +585,7 @@ require_once $include . '_header.php';
                         <span class="topTel__open">
                             8:00～20:00<br>年中無休
                         </span>
-                    </div>
+                    </a>
                 </div>
             </section>
 
@@ -1398,7 +1398,7 @@ require_once $include . '_header.php';
                     <span class="topTel__ttl--line"></span>
                 </div>
                 <div class="sp-wrap">
-                    <div class="topTel__tel flex bet hcenter vcenter">
+                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0120-388-093">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
                             0120-388-093
@@ -1406,7 +1406,7 @@ require_once $include . '_header.php';
                         <span class="topTel__open">
                             8:00～20:00<br>年中無休
                         </span>
-                    </div>
+                    </a>
                 </div>
             </section>
             <?php
