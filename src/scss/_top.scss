@@ -107,7 +107,7 @@
   }
   &Left {
     position: fixed;
-    padding-top: 16rem;
+    padding-top: 12rem;
     width: 41rem;
     &__title {
       &--sub {
@@ -148,14 +148,43 @@
     }
     &Info {
       margin: 5.7rem 0 0;
+      text-align: center;
       &__title {
+        position: relative;
+        margin: 0 0 1rem;
         font-size: 2.5rem;
         font-weight: bold;
-        line-height: 1.45;
-        color: #141314;
+        line-height: 1.4;
+      }
+      &__shopname {
+        position: relative;
+        margin: 1rem 0 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: -4rem;
+          width: 2.5rem;
+          height: 1px;
+          background: $fontColor;
+          transform: translateY(-50%);
+          content: "";
+        }
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: -4rem;
+          width: 2.5rem;
+          height: 1px;
+          background: $fontColor;
+          transform: translateY(-50%);
+          content: "";
+        }
       }
       &__tel {
-        margin: 2.15rem 0 0;
+        margin: 1rem 0 0;
         border: 2px solid $blue3;
         border-radius: 0.8rem;
         width: 100%;
@@ -177,6 +206,55 @@
       &__open {
         font-size: 1.4rem;
         line-height: 1.2;
+      }
+    }
+    @media screen and (max-width: 1500px) {
+      width: 38rem;
+      &__title {
+        img {
+          width: 31.7rem;
+        }
+        &--sub {
+          margin: 0.5rem 0 0;
+          font-size: 2.2rem;
+        }
+      }
+      &__list {
+        margin: 3rem 0 0;
+      }
+      &__link {
+        padding: 1.5rem 0;
+        &--sub {
+          font-size: 1.4rem;
+        }
+        &--main {
+          font-size: 2rem;
+        }
+      }
+      &__btn {
+        margin: 3rem 0 0;
+        width: 100%;
+        height: 6rem;
+      }
+      &Info {
+        margin: 3rem 0 0;
+        text-align: center;
+        &__title {
+          margin: 0 0 0.5rem;
+          font-size: 2.2rem;
+        }
+        &__shopname {
+          position: relative;
+          margin: 0.5rem 0 0;
+          font-size: 1.6rem;
+        }
+        &__tel {
+          width: 100%;
+        }
+        &__num {
+          margin: 0 1rem 0 0;
+          font-size: 3.2rem;
+        }
       }
     }
     @media #{$media-tab} {
@@ -207,8 +285,9 @@
     }
     &__bottom {
       position: absolute;
-      bottom: -1rem;
+      bottom: -4rem;
       left: 0;
+      z-index: 999;
       padding: 1rem 0;
       width: 100%;
       text-align: center;
@@ -219,6 +298,36 @@
         font-weight: bold;
         line-height: 1;
         color: #ffd400;
+      }
+      &--shopname {
+        position: relative;
+        z-index: 1;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: white;
+        background: $pink2;
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: -4rem;
+          z-index: 1;
+          width: 2.5rem;
+          height: 1px;
+          background: white;
+          transform: translateY(-50%);
+          content: "";
+        }
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: -4rem;
+          z-index: 1;
+          width: 2.5rem;
+          height: 1px;
+          background: white;
+          transform: translateY(-50%);
+          content: "";
+        }
       }
     }
   }
@@ -256,8 +365,8 @@
   // タブレットからスマホのみ
   &Link {
     display: none;
-    padding: 4rem 0;
-    background: white;
+    padding: 6rem 0 0 0;
+    background: #f9f9f9;
     &Btn {
       &Wrap {
       }
@@ -314,16 +423,28 @@
 
   &Copy {
     position: relative;
-    padding: 6rem 0 0rem;
+    padding: 8.5rem 0 2rem;
     text-align: center;
+    background: #f9f9f9;
+    @media #{$media-sp} {
+      padding: 5rem 0 0rem;
+    }
     &__bg {
       position: absolute;
       top: 0;
       left: 0;
       z-index: -1;
       width: 100%;
-      height: 100%;
-      background: white;
+      height: calc(100% + 10rem);
+
+      @media screen and (max-width: 376px) {
+        height: calc(100% + 6.5rem);
+      }
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
     &__head {
       position: relative;
@@ -381,8 +502,11 @@
   }
   &Service {
     position: relative;
-    padding: 10rem 0 5.3rem;
+    padding: 15rem 0 5.3rem;
     text-align: center;
+    @media screen and (max-width: 376px) {
+      padding: 11.5rem 0 5.3rem;
+    }
     &__bg {
       position: absolute;
       top: -6rem;
@@ -1054,6 +1178,9 @@
       }
       &__img {
         width: 10rem;
+        img {
+          border-radius: 0.8rem;
+        }
       }
       &__text {
         flex-grow: 1;
@@ -1389,6 +1516,7 @@
     display: none;
     position: relative;
     padding: 0 0 4rem;
+    text-align: center;
     &__bg {
       position: absolute;
       top: 0;
@@ -1400,24 +1528,39 @@
     }
     &__ttl {
       position: relative;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: bold;
+    }
+
+    &__shopname {
+      position: relative;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-align: center;
       &::before {
         position: absolute;
-        z-index: -1;
-        width: 100%;
+        top: 50%;
+        left: -4rem;
+        width: 2.5rem;
         height: 1px;
-        background: #d8d2d2;
+        background: $fontColor;
+        transform: translateY(-50%);
         content: "";
       }
-      .ttl {
-        padding: 0 1rem;
-        background: white;
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -4rem;
+        width: 2.5rem;
+        height: 1px;
+        background: $fontColor;
+        transform: translateY(-50%);
+        content: "";
       }
     }
 
     &__tel {
-      margin: 2.15rem 0 0;
+      margin: 1rem 0 0;
       border: 2px solid $blue3;
       border-radius: 0.8rem;
       width: 100%;
@@ -1427,8 +1570,9 @@
       background: $blue1;
     }
     &__num {
-      margin: 0 1.4rem 0 0;
-      font-size: 3rem;
+      margin: 0 1rem 0 0;
+      font-size: 2.8rem;
+      white-space: nowrap;
       .icon {
         margin-right: 0.7rem;
         font-size: 2.3rem;

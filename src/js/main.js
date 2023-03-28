@@ -8,8 +8,6 @@ import scrollLock from './functions/_scrollLock.js' // スクロールロック
 // その他、Swiperで使う機能があったら上に追加で宣言する
 // A11y, Autoplay, Controller, EffectCoverflow, EffectCube, EffectFade, EffectFlip, HashNavigation, History, Keyboard, Lazy, Mousewheel, Navigation, Pagination, Parallax, Scrollbar, Thumbs, Virtual, Zoom,
 
-scrollLock('body', '#overlay')
-
 $(function () {
   $('.js-ques-open').click(function () {
     $(this).toggleClass('open')
@@ -42,3 +40,5 @@ window.addEventListener('pageshow', () => {
   }
   flg = 2
 })
+
+scrollLock('body', '#overlay')

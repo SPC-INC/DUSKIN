@@ -56,18 +56,20 @@ require_once $include . '_header.php';
             <a class="topLeft__btn op md-btn pink" href="#topContact">
                 無料相談・お見積りはこちら
             </a>
-
             <div class="topLeftInfo">
                 <div class="topLeftInfo__title">
                     電話で無料相談・お見積りはこちら
                 </div>
+                <span class="topLeftInfo__shopname">
+                    ダスキン筑波嶺 メリーメイド
+                </span>
                 <div class="topLeftInfo__tel flex bet hcenter vcenter">
                     <span class="topLeftInfo__num flex vcenter robo">
                         <i class="icon icon-phone"></i>
                         045-489-3663
                     </span>
                     <span class="topLeftInfo__open">
-                        8:00～20:00<br>年中無休
+                        9:00～17:00<br>定休日：土日祝
                     </span>
                 </div>
             </div>
@@ -82,9 +84,14 @@ require_once $include . '_header.php';
                     <img src="<?php echo HOME ?>img/top_mv.png" alt="">
                 </div>
                 <div class="topMv__bottom">
-                    <img src="<?php echo HOME ?>img/merry_maids_white.svg" alt="" class="topMv__bottom--logo">
-                    <span class="topMv__bottom--head">
-                        家事代行サービス
+                    <div class="">
+                        <img src="<?php echo HOME ?>img/merry_maids_white.svg" alt="" class="topMv__bottom--logo">
+                        <span class="topMv__bottom--head">
+                            家事代行サービス
+                        </span>
+                    </div>
+                    <span class="topMv__bottom--shopname">
+                        ダスキン筑波嶺 メリーメイド
                     </span>
                 </div>
             </section>
@@ -572,11 +579,12 @@ require_once $include . '_header.php';
 
             <section class="topTel">
                 <div class="topTel__bg"></div>
-                <div class="topTel__ttl flex vcenter bet">
-                    <span class="topTel__ttl--line"></span>
-                    <span class="ttl">電話で無料相談・お見積りはこちら</span>
-                    <span class="topTel__ttl--line"></span>
+                <div class="topTel__ttl">
+                    電話で無料相談・お見積りはこちら
                 </div>
+                <span class="topTel__shopname">
+                    ダスキン筑波嶺 メリーメイド
+                </span>
                 <div class="sp-wrap">
                     <a class="topTel__tel flex bet hcenter vcenter" href="tel:0454893663">
                         <span class="topTel__num flex vcenter robo">
@@ -584,7 +592,7 @@ require_once $include . '_header.php';
                             045-489-3663
                         </span>
                         <span class="topTel__open">
-                            8:00～20:00<br>年中無休
+                            9:00～17:00<br>定休日：土日祝
                         </span>
                     </a>
                 </div>
@@ -1393,11 +1401,12 @@ require_once $include . '_header.php';
             </section>
             <section class="topTel">
                 <div class="topTel__bg"></div>
-                <div class="topTel__ttl flex vcenter bet">
-                    <span class="topTel__ttl--line"></span>
-                    <span class="ttl">電話で無料相談・お見積りはこちら</span>
-                    <span class="topTel__ttl--line"></span>
+                <div class="topTel__ttl">
+                    電話で無料相談・お見積りはこちら
                 </div>
+                <span class="topTel__shopname">
+                    ダスキン筑波嶺 メリーメイド
+                </span>
                 <div class="sp-wrap">
                     <a class="topTel__tel flex bet hcenter vcenter" href="tel:0454893663">
                         <span class="topTel__num flex vcenter robo">
@@ -1405,7 +1414,7 @@ require_once $include . '_header.php';
                             045-489-3663
                         </span>
                         <span class="topTel__open">
-                            8:00～20:00<br>年中無休
+                            9:00～17:00<br>定休日：土日祝
                         </span>
                     </a>
                 </div>
