@@ -1257,7 +1257,7 @@ require_once $include . '_header.php';
                     </div>
 
                     <div class="topContactForm topContactForm--pink js-form" id="form-kaji">
-                        <form action="<?php echo HOME; ?>mail.php" method="post">
+                        <form action="<?php echo HOME; ?>sakuragi/mail.php" method="post">
                             <input type="text" hidden name="サービス内容" value="家事お手伝いサービス">
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
