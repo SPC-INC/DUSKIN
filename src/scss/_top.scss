@@ -184,9 +184,9 @@
         }
       }
       &__area {
-        text-align: left;
         font: normal normal normal 12px/20px Noto Sans JP;
         color: #141314;
+        text-align: left;
       }
       &__tel {
         margin: 1rem 0 0;
@@ -335,12 +335,12 @@
         }
       }
       &--area {
-        text-align: left;
-        font: normal normal normal 12px/18px Noto Sans JP;
-        color: #fff;
-        width: 68%;
         margin: auto;
         padding-top: 4px;
+        width: 68%;
+        font: normal normal normal 12px/18px Noto Sans JP;
+        color: #fff;
+        text-align: left;
       }
     }
   }
@@ -1483,7 +1483,7 @@
           width: 100%;
           font-size: 1.4rem;
           &::placeholder {
-            color: #e5e5e5;
+            color: #ccc;
           }
         }
         input.zip {
@@ -1514,6 +1514,44 @@
           font-weight: bold;
           line-height: 1.5;
           text-align: center;
+        }
+      }
+      &__checkbox {
+        padding-top: 10px;
+        label {
+          display: flex;
+          align-items: center;
+        }
+        input[type="checkbox"] {
+          position: relative;
+          border: 1px solid #b7b7b7;
+          border-radius: 1px;
+          background: none;
+          cursor: pointer;
+          line-height: 0;
+          margin: 0 0.6em 0 0;
+          outline: 0;
+          padding: 0 !important;
+          vertical-align: text-top;
+          height: 20px;
+          width: 20px;
+          -webkit-appearance: none;
+          &::before {
+            content: "";
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            width: 6px;
+            height: 12px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            margin: -1px -1px 0 -1px;
+            transform: rotate(45deg) translate(-50%, -50%);
+            z-index: 2;
+          }
+          &:checked {
+            background-color: #b7b7b7;
+          }
         }
       }
     }

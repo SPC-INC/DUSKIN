@@ -11,10 +11,17 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
 <script type="text/javascript">
     $(function() {
-        $(document).on('change', 'select', function(e) {
+        let arrData = [];
+        $('input[type=checkbox]').on('change', function(e) {
             let requesetName = $(this).val();
             let target = $(this).closest('.topContactForm__form').next().find('#request_content');
-            if (requesetName === 'その他') {
+
+            if ($(this).is(':checked')) {
+                arrData.push($(this).val());
+            } else {
+                arrData.splice($.inArray($(this).val(), arrData), 1);
+            }
+            if (jQuery.inArray("その他", arrData) !== -1) {
                 target.addClass('validate[required]');
             } else {
                 target.removeClass('validate[required]');
