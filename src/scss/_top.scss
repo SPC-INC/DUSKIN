@@ -183,6 +183,11 @@
           content: "";
         }
       }
+      &__area {
+        text-align: left;
+        font: normal normal normal 12px/20px Noto Sans JP;
+        color: #141314;
+      }
       &__tel {
         margin: 1rem 0 0;
         border: 2px solid $blue3;
@@ -285,7 +290,7 @@
     }
     &__bottom {
       position: absolute;
-      bottom: -4rem;
+      bottom: -7rem;
       left: 0;
       z-index: 999;
       padding: 1rem 0;
@@ -329,6 +334,14 @@
           content: "";
         }
       }
+      &--area {
+        text-align: left;
+        font: normal normal normal 12px/18px Noto Sans JP;
+        color: #fff;
+        width: 68%;
+        margin: auto;
+        padding-top: 4px;
+      }
     }
   }
 
@@ -365,7 +378,7 @@
   // タブレットからスマホのみ
   &Link {
     display: none;
-    padding: 6rem 0 0;
+    padding: 9rem 0 0;
     background: #f9f9f9;
     &Btn {
       &Wrap {
@@ -423,7 +436,7 @@
 
   &Copy {
     position: relative;
-    padding: 8.5rem 0 2rem;
+    padding: 10.5rem 0 2rem;
     text-align: center;
     background: #f9f9f9;
     @media #{$media-sp} {

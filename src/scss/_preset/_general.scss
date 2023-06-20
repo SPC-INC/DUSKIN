@@ -601,3 +601,12 @@ SP幅:常にhoverToggle__onを非表示にする。
     }
   }
 }
+
+.w {
+  &-100 {
+    width: 100% !important;
+  }
+  &-50 {
+    width: 50% !important;
+  }
+}

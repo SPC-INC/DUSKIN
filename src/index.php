@@ -64,6 +64,9 @@ require_once $include . '_header.php';
                 <span class="topLeftInfo__shopname">
                     ダスキン〇〇〇 メリーメイド
                 </span>
+                <div class="topLeftInfo__area">
+                    横浜市瀬谷区、旭区、泉区、戸塚区、緑区、保土ヶ谷区、港南区、大和市
+                </div>
                 <div class="topLeftInfo__tel flex bet hcenter vcenter">
                     <span class="topLeftInfo__num flex vcenter robo">
                         <i class="icon icon-phone"></i>
@@ -94,6 +97,9 @@ require_once $include . '_header.php';
                     <span class="topMv__bottom--shopname">
                         ダスキン〇〇〇 メリーメイド
                     </span>
+                    <div class="topMv__bottom--area">
+                        横浜市瀬谷区、旭区、泉区、戸塚区、緑区、保土ヶ谷区、港南区、大和市
+                    </div>
                 </div>
             </section>
 
@@ -1233,13 +1239,29 @@ require_once $include . '_header.php';
                             </div>
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
-                                    依頼したい内容やご相談事
+                                    依頼内容
                                     <span class="topContactForm__ques--req flex vcenter hcenter">
                                         必須
                                     </span>
                                 </div>
                                 <div class="topContactForm__ans">
-                                    <textarea name="依頼したい内容やご相談事" id="" placeholder="リビングと寝室のお掃除、犬の散歩をお願いしたいです。" class="validate【required】"></textarea>
+                                    <select name="依頼内容" class="w-100 validate【required】">
+                                        <option value="">選択してください</option>
+                                        <option value="レンジフード">レンジフード</option>
+                                        <option value="キッチン">キッチン</option>
+                                        <option value="浴室">浴室</option>
+                                        <option value="洗面所">洗面所</option>
+                                        <option value="トイレ">トイレ</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="topContactForm__form">
+                                <div class="topContactForm__ques flex vcenter">
+                                    依頼したい内容やご相談事
+                                </div>
+                                <div class="topContactForm__ans">
+                                    <textarea name="依頼したい内容やご相談事" id="request_content" placeholder="リビングと寝室のお掃除、犬の散歩をお願いしたいです。"></textarea>
                                 </div>
                             </div>
                             <div class="topContactFormBtnWrap">
@@ -1252,7 +1274,7 @@ require_once $include . '_header.php';
                             <span class="topContactForm__notice--head">
                                 【個人情報の取扱いについて】
                             </span>
-                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましては株式会社ダスキン南関東地域本部03-5909-6732までご連絡ください。
+                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましては各店舗名称03-5909-6732までご連絡ください。
                         </p>
                     </div>
 
@@ -1366,13 +1388,32 @@ require_once $include . '_header.php';
                             </div>
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
-                                    依頼したい内容やご相談事
+                                    依頼内容
                                     <span class="topContactForm__ques--req flex vcenter hcenter">
                                         必須
                                     </span>
                                 </div>
                                 <div class="topContactForm__ans">
-                                    <textarea name="依頼したい内容やご相談事" id="" placeholder="リビングと寝室のお掃除、犬の散歩をお願いしたいです。" class="validate【required】"></textarea>
+                                    <select name="依頼内容" class="w-100 validate【required】">
+                                        <option value="">選択してください</option>
+                                        <option value="掃除機掛け">掃除機掛け</option>
+                                        <option value="水まわりのお掃除（日常清掃）">水まわりのお掃除（日常清掃）</option>
+                                        <option value="拭き掃除">拭き掃除</option>
+                                        <option value="食器洗い">食器洗い</option>
+                                        <option value="洗濯">洗濯</option>
+                                        <option value="ベッドメイキング">ベッドメイキング</option>
+                                        <option value="調理（ご在宅時のみ）">調理（ご在宅時のみ）</option>
+                                        <option value="片づけ">片づけ</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="topContactForm__form">
+                                <div class="topContactForm__ques flex vcenter">
+                                    依頼したい内容やご相談事
+                                </div>
+                                <div class="topContactForm__ans">
+                                    <textarea name="依頼したい内容やご相談事" id="request_content" placeholder="リビングと寝室のお掃除、犬の散歩をお願いしたいです。"></textarea>
                                 </div>
                             </div>
                             <div class="topContactFormBtnWrap">
@@ -1385,7 +1426,7 @@ require_once $include . '_header.php';
                             <span class="topContactForm__notice--head">
                                 【個人情報の取扱いについて】
                             </span>
-                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましては株式会社ダスキン南関東地域本部03-5909-6732までご連絡ください。
+                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましては各店舗名称03-5909-6732までご連絡ください。
                         </p>
                     </div>
                     <p class="topContact__notice">
