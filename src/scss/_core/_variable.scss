@@ -85,13 +85,14 @@ $vw70px: 21.875vw;
 $site-width: 1200px; //サイト幅
 $pc-width: 1024px; //PC解像度
 $tab-width: 769px; //TAB解像度
+$tab-width-add: 501px; //TAB解像度
 $sp-width: 500px; //SP解像度
 $media-port: "screen and (orientation:portrait)"; //ポートレート
 $media-land: "screen and (orientation:landscape)"; //ランドスケープ
 $media-full: "screen and (min-width:#{$site-width})"; //想定最大幅
 $media-notfull: "screen and (max-width:#{$site-width - 1})"; //最大未満
 $media-pc: "screen and (min-width:#{$pc-width})"; //PC相当以上
-$media-tab: "screen and (min-width:#{$tab-width - 1 }) and (max-width:#{$pc-width})"; //タブレット相当
+$media-tab: "screen and (min-width:#{$tab-width-add - 1 }) and (max-width:#{$pc-width})"; //タブレット相当
 $media-ipad: "screen and (min-width:#{$tab-width - 1}))"; //iPad相当
 $media-notsp: "screen and (min-width:#{$tab-width})"; //SP以外
 $media-sp: "screen and (max-width:#{$sp-width})"; //SP相当
