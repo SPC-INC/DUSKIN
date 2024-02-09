@@ -10,6 +10,12 @@
 <link href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
 <script type="text/javascript">
+    var verifyCallback = function(response) {
+        document.getElementById("send").disabled = false;
+    };
+    var verifyCallback2 = function(response) {
+        document.getElementById("send2").disabled = false;
+    };
     $(function() {
         let arrData = [];
         $('input[type=checkbox]').on('change', function(e) {
@@ -34,6 +40,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery.validationEngine.min.js"></script>
 <script src="<?php echo $home ?>js/form.min.js"></script>
 <script src="<?php echo $home; ?>js/ajaxzip3.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 
 </html>

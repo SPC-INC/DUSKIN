@@ -218,34 +218,48 @@ if (empty($errm)) {
 }
 
 if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
+    // reCAPTCHA validation
+    if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+        // Google secret API
+        $secretAPIkey = '6Lf4EG0pAAAAAG0KbvH2WQjufZ_iWoEmaMox-mQs';
 
-    //トークンチェック（CSRF対策）※確認画面がONの場合のみ実施
-    if ($useToken == 1 && $confirmDsp == 1) {
-        if (empty($_SESSION['mailform_token']) || ($_SESSION['mailform_token'] !== $_POST['mailform_token'])) {
-            exit('ページ遷移が不正です');
+        // reCAPTCHA response verification
+        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secretAPIkey . '&response=' . $_POST['g-recaptcha-response']);
+
+        // Decode JSON data
+        $response = json_decode($verifyResponse);
+
+        //トークンチェック（CSRF対策）※確認画面がONの場合のみ実施
+        if ($response->success) {
+            if ($useToken == 1 && $confirmDsp == 1) {
+                if (empty($_SESSION['mailform_token']) || ($_SESSION['mailform_token'] !== $_POST['mailform_token'])) {
+                    exit('ページ遷移が不正です');
+                }
+                if (isset($_SESSION['mailform_token'])) unset($_SESSION['mailform_token']); //トークン破棄
+                if (isset($_POST['mailform_token'])) unset($_POST['mailform_token']); //トークン破棄
+            }
+
+            //差出人に届くメールをセット
+            unset($_POST['g-recaptcha-response']);
+            if ($remail == 1) {
+                $userBody = mailToUser($_POST, $dsp_name, $remail_text, $mailFooterDsp, $mailSignature, $encode);
+                $reheader = userHeader($refrom_name, $from, $encode);
+                $re_subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($re_subject, "JIS", $encode)) . "?=";
+            }
+            //管理者宛に届くメールをセット
+            $adminBody = mailToAdmin($_POST, $subject, $mailFooterDsp, $mailSignature, $encode, $confirmDsp);
+            $header = adminHeader($post_mail, $BccMail);
+            $subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($subject, "JIS", $encode)) . "?=";
+
+            //-fオプションによるエンベロープFrom（Return-Path）の設定(safe_modeがOFFの場合かつ上記設定がONの場合のみ実施)
+            if ($use_envelope == 0) {
+                mail($to, $subject, $adminBody, $header);
+                if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader);
+            } else {
+                mail($to, $subject, $adminBody, $header, '-f' . $from);
+                if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader, '-f' . $from);
+            }
         }
-        if (isset($_SESSION['mailform_token'])) unset($_SESSION['mailform_token']); //トークン破棄
-        if (isset($_POST['mailform_token'])) unset($_POST['mailform_token']); //トークン破棄
-    }
-
-    //差出人に届くメールをセット
-    if ($remail == 1) {
-        $userBody = mailToUser($_POST, $dsp_name, $remail_text, $mailFooterDsp, $mailSignature, $encode);
-        $reheader = userHeader($refrom_name, $from, $encode);
-        $re_subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($re_subject, "JIS", $encode)) . "?=";
-    }
-    //管理者宛に届くメールをセット
-    $adminBody = mailToAdmin($_POST, $subject, $mailFooterDsp, $mailSignature, $encode, $confirmDsp);
-    $header = adminHeader($post_mail, $BccMail);
-    $subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($subject, "JIS", $encode)) . "?=";
-
-    //-fオプションによるエンベロープFrom（Return-Path）の設定(safe_modeがOFFの場合かつ上記設定がONの場合のみ実施)
-    if ($use_envelope == 0) {
-        mail($to, $subject, $adminBody, $header);
-        if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader);
-    } else {
-        mail($to, $subject, $adminBody, $header, '-f' . $from);
-        if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader, '-f' . $from);
     }
 } else if ($confirmDsp == 1) {
 
