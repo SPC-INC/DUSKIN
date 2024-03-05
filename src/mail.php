@@ -33,12 +33,12 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) { //PHP5.1.0以上の場合の�
 $site_top = "./";
 
 //管理者のメールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
-$to = "test@spc-jpn.co.jp";
+$to = "kamakura@duskin-city.com";
 
 //送信元メールアドレス（管理者宛て、及びユーザー宛メールの送信元メールアドレスです）
 //必ず実在するメールアドレスでかつ出来る限り設置先サイトのドメインと同じドメインのメールアドレスとすることを強く推奨します
 //管理者宛てメールの返信先（reply）はユーザーのメールアドレスになります。
-$from = "test@spc-jpn.co.jp";
+$from = "kamakura@duskin-city.com";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
 $Email = "メールアドレス";
@@ -103,10 +103,10 @@ $require = array('お名前', 'Email');
 $remail = 1;
 
 //自動返信メールの送信者欄に表示される名前　※あなたの名前や会社名など（もし自動返信メールの送信者名が文字化けする場合ここは空にしてください）
-$refrom_name = "ダスキン○○○○";
+$refrom_name = "ダスキン鎌倉メリーメイド";
 
 // 差出人に送信確認メールを送る場合のメールのタイトル（上記で1を設定した場合のみ）
-$re_subject = "【ダスキン○○○○】お問い合わせありがとうございます。";
+$re_subject = "【ダスキン鎌倉メリーメイド】お問い合わせありがとうございます。";
 
 
 
@@ -115,7 +115,7 @@ $remail_text = <<< TEXT
 
 （このメールはお問い合わせ確認用に自動的に送信されています）
 
-この度は、ダスキン○○○○にお問い合わせいただきまして誠にありがとうございます。
+この度は、ダスキン鎌倉メリーメイドにお問い合わせいただきまして誠にありがとうございます。
 
 下記のようにお問い合わせを受付いたしました。
 担当者より、2～3営業日以内に折り返しご連絡させていただきます。
@@ -132,8 +132,8 @@ $mailFooterDsp = 1;
 $mailSignature = <<< FOOTER
 
 ──────────────────────
-ダスキン〇〇〇（店名）メリーメイド
-平日9：00～17：00　定休日：土日祝
+ダスキン鎌倉　メリーメイド
+平日：8：30～18：00　土曜のみ12：00まで　定休日：土曜(午後)日祝
 ──────────────────────
 
 FOOTER;
@@ -230,35 +230,33 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
         $response = json_decode($verifyResponse);
 
         //トークンチェック（CSRF対策）※確認画面がONの場合のみ実施
-        if ($response->success) {
-            if ($useToken == 1 && $confirmDsp == 1) {
-                if (empty($_SESSION['mailform_token']) || ($_SESSION['mailform_token'] !== $_POST['mailform_token'])) {
-                    exit('ページ遷移が不正です');
-                }
-                if (isset($_SESSION['mailform_token'])) unset($_SESSION['mailform_token']); //トークン破棄
-                if (isset($_POST['mailform_token'])) unset($_POST['mailform_token']); //トークン破棄
+        if ($useToken == 1 && $confirmDsp == 1) {
+            if (empty($_SESSION['mailform_token']) || ($_SESSION['mailform_token'] !== $_POST['mailform_token'])) {
+                exit('ページ遷移が不正です');
             }
+            if (isset($_SESSION['mailform_token'])) unset($_SESSION['mailform_token']); //トークン破棄
+            if (isset($_POST['mailform_token'])) unset($_POST['mailform_token']); //トークン破棄
+        }
 
-            //差出人に届くメールをセット
-            unset($_POST['g-recaptcha-response']);
-            if ($remail == 1) {
-                $userBody = mailToUser($_POST, $dsp_name, $remail_text, $mailFooterDsp, $mailSignature, $encode);
-                $reheader = userHeader($refrom_name, $from, $encode);
-                $re_subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($re_subject, "JIS", $encode)) . "?=";
-            }
-            //管理者宛に届くメールをセット
-            $adminBody = mailToAdmin($_POST, $subject, $mailFooterDsp, $mailSignature, $encode, $confirmDsp);
-            $header = adminHeader($post_mail, $BccMail);
-            $subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($subject, "JIS", $encode)) . "?=";
+        unset($_POST['g-recaptcha-response']);
+        //差出人に届くメールをセット
+        if ($remail == 1) {
+            $userBody = mailToUser($_POST, $dsp_name, $remail_text, $mailFooterDsp, $mailSignature, $encode);
+            $reheader = userHeader($refrom_name, $from, $encode);
+            $re_subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($re_subject, "JIS", $encode)) . "?=";
+        }
+        //管理者宛に届くメールをセット
+        $adminBody = mailToAdmin($_POST, $subject, $mailFooterDsp, $mailSignature, $encode, $confirmDsp);
+        $header = adminHeader($post_mail, $BccMail);
+        $subject = "=?iso-2022-jp?B?" . base64_encode(mb_convert_encoding($subject, "JIS", $encode)) . "?=";
 
-            //-fオプションによるエンベロープFrom（Return-Path）の設定(safe_modeがOFFの場合かつ上記設定がONの場合のみ実施)
-            if ($use_envelope == 0) {
-                mail($to, $subject, $adminBody, $header);
-                if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader);
-            } else {
-                mail($to, $subject, $adminBody, $header, '-f' . $from);
-                if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader, '-f' . $from);
-            }
+        //-fオプションによるエンベロープFrom（Return-Path）の設定(safe_modeがOFFの場合かつ上記設定がONの場合のみ実施)
+        if ($use_envelope == 0) {
+            mail($to, $subject, $adminBody, $header);
+            if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader);
+        } else {
+            mail($to, $subject, $adminBody, $header, '-f' . $from);
+            if ($remail == 1 && !empty($post_mail)) mail($post_mail, $re_subject, $userBody, $reheader, '-f' . $from);
         }
     }
 } else if ($confirmDsp == 1) {
