@@ -1,9 +1,11 @@
-rem Fix Node.js version
-set node=14.17.3
+rem Set Node.js version
+set node=12.22.3
+set npm=8.19.4
 rem Try volta
 WHERE /Q volta
 IF  %ERRORLEVEL% == 0 (
   volta install node@%node%
+  volta install npm@%npm%
 ) ELSE (
   rem Try nvm
   WHERE /Q nvm
@@ -17,7 +19,12 @@ IF  %ERRORLEVEL% == 0 (
 rem Go to current directory
 cd /d %~dp0
 rem Run npm
-start npm run restart
+call npm run restart
+
+timeout 10
+
+@echo off
 
 rem old Node.js
-rem 12.22.3
+set node=12.22.3
+set node=10.24.1
