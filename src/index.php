@@ -1262,7 +1262,7 @@ require_once $include . '_header.php';
                                     <textarea name="依頼したい内容やご相談事" id="request_content" placeholder="リビングと寝室のお掃除をお願いしたいです。"></textarea>
                                 </div>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6Lf4EG0pAAAAAFwv6x4BO1S-5A4dNhr_5hdgnJrV" data-callback="verifyCallback"></div>
+                            <div class="g-recaptcha flex hcenter" data-sitekey="6Lf4EG0pAAAAAFwv6x4BO1S-5A4dNhr_5hdgnJrV" data-callback="verifyCallback"></div>
                             <div class="topContactFormBtnWrap">
                                 <button class="topContactForm__btn btn md-btn pink op" type="submit" id="send" disabled>
                                     見積りを依頼する

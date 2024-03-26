@@ -65,15 +65,15 @@ require_once $include . '_header.php';
                     ダスキン筑波嶺 メリーメイド
                 </span>
                 <div class="topLeftInfo__area">
-                    【対応エリア】鎌倉市・逗子市・葉山町・<br>横浜市金沢区・栄区・泉区・藤沢市
+                    【対応エリア】横浜市瀬谷区、旭区、泉区、戸塚区、<br>緑区、保土ヶ谷区、港南区、大和市
                 </div>
                 <div class="topLeftInfo__tel flex bet hcenter vcenter">
                     <span class="topLeftInfo__num flex vcenter robo">
                         <i class="icon icon-phone"></i>
-                        0120-3-82820
+                        045-489-3663
                     </span>
                     <span class="topLeftInfo__open">
-                        8:30～18:00<br>土曜のみ12:00まで<br>【定休日】<br>土曜(午後)日祝
+                        9:00～17:00<br>【定休日】<br>土日祝
                     </span>
                 </div>
             </div>
@@ -86,7 +86,7 @@ require_once $include . '_header.php';
             <section class="topMv">
                 <div class="topMv__img">
                     <img src="<?php echo HOME ?>img/top_mv.png" alt="">
-                    <a href="<?php echo HOME ?>pdf/0311お客様向け案内文（HP配信）.pdf" target="_blank" class="topMv__link flex hcenter">標準料金改定のお知らせはコチラ</a>
+                    <a href="<?php echo HOME ?>pdf/お客様向け案内文_1_tsukubane.pdf" target="_blank" class="topMv__link flex hcenter">標準料金改定のお知らせはコチラ</a>
                 </div>
                 <div class="topMv__bottom">
                     <div class="">
@@ -99,7 +99,7 @@ require_once $include . '_header.php';
                         ダスキン筑波嶺 メリーメイド
                     </span>
                     <div class="topMv__bottom--area">
-                        【対応エリア】鎌倉市・逗子市・葉山町・<br>横浜市金沢区・栄区・泉区・藤沢市
+                        【対応エリア】横浜市瀬谷区、旭区、泉区、戸塚区、<br>緑区、保土ヶ谷区、港南区、大和市
                     </div>
                 </div>
             </section>
@@ -593,13 +593,13 @@ require_once $include . '_header.php';
                     <span class="topTel__ttl--line"></span>
                 </div>
                 <div class="sp-wrap">
-                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0120-3-82820">
+                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:045-489-3663">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            0120-3-82820
+                            045-489-3663
                         </span>
                         <span class="topTel__open">
-                            8:30～18:00<br>土曜のみ12:00まで<br>定休日：土曜(午後)日祝
+                            9:00～17:00<br>定休日：土日祝
                         </span>
                     </a>
                 </div>
@@ -1262,7 +1262,7 @@ require_once $include . '_header.php';
                                     <textarea name="依頼したい内容やご相談事" id="request_content" placeholder="リビングと寝室のお掃除をお願いしたいです。"></textarea>
                                 </div>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6Lf4EG0pAAAAAFwv6x4BO1S-5A4dNhr_5hdgnJrV" data-callback="verifyCallback"></div>
+                            <!-- <div class="g-recaptcha" data-sitekey="6Lf4EG0pAAAAAFwv6x4BO1S-5A4dNhr_5hdgnJrV" data-callback="verifyCallback"></div> -->
                             <div class="topContactFormBtnWrap">
                                 <button class="topContactForm__btn btn md-btn pink op" type="submit" id="send" disabled>
                                     見積りを依頼する
@@ -1273,7 +1273,7 @@ require_once $include . '_header.php';
                             <span class="topContactForm__notice--head">
                                 【個人情報の取扱いについて】
                             </span>
-                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましてはダスキン鎌倉 メリーメイド　0120-3-82820　までご連絡ください。
+                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましてはダスキン筑波嶺 メリーメイド　045-489-3663　までご連絡ください。
                         </p>
                     </div>
 
@@ -1423,7 +1423,7 @@ require_once $include . '_header.php';
                             <span class="topContactForm__notice--head">
                                 【個人情報の取扱いについて】
                             </span>
-                            お預かりした個人情報は、フランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましてはダスキン●● メリーメイド　0120-3-82820　までご連絡ください。
+                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましてはダスキン筑波嶺 メリーメイド　045-489-3663　までご連絡ください。
                         </p>
                     </div>
                     <p class="topContact__notice">
@@ -1445,13 +1445,13 @@ require_once $include . '_header.php';
                     <span class="topTel__ttl--line"></span>
                 </div>
                 <div class="sp-wrap">
-                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0120-3-82820">
+                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:045-489-3663">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            0120-3-82820
+                            045-489-3663
                         </span>
                         <span class="topTel__open">
-                            8:30～18:00<br>土曜のみ12:00まで<br>定休日：土曜(午後)日祝
+                            9:00～17:00<br>定休日：土日祝
                         </span>
                     </a>
                 </div>

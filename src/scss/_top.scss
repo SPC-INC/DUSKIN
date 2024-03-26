@@ -344,7 +344,7 @@
       &--area {
         margin: auto;
         padding-top: 4px;
-        width: 68%;
+        width: 80%;
         font: normal normal normal 12px/18px Noto Sans JP;
         color: #fff;
       }
@@ -384,7 +384,7 @@
   // タブレットからスマホのみ
   &Link {
     display: none;
-    padding: 9rem 0 0;
+    padding: 12rem 0 0;
     background: #f9f9f9;
     &Btn {
       &Wrap {
@@ -440,6 +440,9 @@
   }
   // タブレットからスマホのみ
 
+  .g-recaptcha {
+    padding: 1rem 0 2rem;
+  }
   &Copy {
     position: relative;
     padding: 10.5rem 0 2rem;
