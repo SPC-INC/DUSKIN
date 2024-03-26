@@ -86,7 +86,7 @@ require_once $include . '_header.php';
             <section class="topMv">
                 <div class="topMv__img">
                     <img src="<?php echo HOME ?>img/top_mv.png" alt="">
-                    <a href="<?php echo HOME ?>pdf/242028【最終】お客様向け案内文（HP配信）.pdf" target="_blank" class="topMv__link flex hcenter">標準料金改定のお知らせはコチラ</a>
+                    <a href="<?php echo HOME ?>pdf/0311お客様向け案内文（HP配信）.pdf" target="_blank" class="topMv__link flex hcenter">標準料金改定のお知らせはコチラ</a>
                 </div>
                 <div class="topMv__bottom">
                     <div class="">
@@ -1072,7 +1072,7 @@ require_once $include . '_header.php';
                             ),
                             array(
                                 'ques' => 'うちは汚れているから、料金は高くなるの？',
-                                'ans' => '定期サービスの場合、初回に一度だけいただく初回金が、汚れの程度によって違います。',
+                                'ans' => '定期サービスも1回のみのサービスも、料金は汚れによって変わるものではありません。定期サービスの場合、初回に一度だけいただく初回金が、汚れの程度によって違います。',
                             ),
                             array(
                                 'ques' => '家事やお掃除をしてもらうときは、留守でもいいの？',

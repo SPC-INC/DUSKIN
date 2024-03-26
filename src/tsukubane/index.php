@@ -56,6 +56,7 @@ require_once $include . '_header.php';
             <a class="topLeft__btn op md-btn pink" href="#topContact">
                 無料相談・お見積りはこちら
             </a>
+
             <div class="topLeftInfo">
                 <div class="topLeftInfo__title">
                     電話で無料相談・お見積りはこちら
@@ -63,13 +64,16 @@ require_once $include . '_header.php';
                 <span class="topLeftInfo__shopname">
                     ダスキン筑波嶺 メリーメイド
                 </span>
+                <div class="topLeftInfo__area">
+                    【対応エリア】鎌倉市・逗子市・葉山町・<br>横浜市金沢区・栄区・泉区・藤沢市
+                </div>
                 <div class="topLeftInfo__tel flex bet hcenter vcenter">
                     <span class="topLeftInfo__num flex vcenter robo">
                         <i class="icon icon-phone"></i>
-                        045-489-3663
+                        0120-3-82820
                     </span>
                     <span class="topLeftInfo__open">
-                        9:00～17:00<br>定休日：土日祝
+                        8:30～18:00<br>土曜のみ12:00まで<br>【定休日】<br>土曜(午後)日祝
                     </span>
                 </div>
             </div>
@@ -82,6 +86,7 @@ require_once $include . '_header.php';
             <section class="topMv">
                 <div class="topMv__img">
                     <img src="<?php echo HOME ?>img/top_mv.png" alt="">
+                    <a href="<?php echo HOME ?>pdf/0311お客様向け案内文（HP配信）.pdf" target="_blank" class="topMv__link flex hcenter">標準料金改定のお知らせはコチラ</a>
                 </div>
                 <div class="topMv__bottom">
                     <div class="">
@@ -93,6 +98,9 @@ require_once $include . '_header.php';
                     <span class="topMv__bottom--shopname">
                         ダスキン筑波嶺 メリーメイド
                     </span>
+                    <div class="topMv__bottom--area">
+                        【対応エリア】鎌倉市・逗子市・葉山町・<br>横浜市金沢区・栄区・泉区・藤沢市
+                    </div>
                 </div>
             </section>
 
@@ -278,7 +286,7 @@ require_once $include . '_header.php';
                                     'slug' => 'range'
                                 ),
                                 array(
-                                    'spot' => 'バスルーム',
+                                    'spot' => '浴室',
                                     'slug' => 'bath'
                                 ),
                                 array(
@@ -309,28 +317,28 @@ require_once $include . '_header.php';
                                     'slug' => 'kitchen',
                                     'text' => 'こげつき・ヌメリ・油汚れなど、<br>
                                     キッチン特有の頑固な汚れを除去。',
-                                    'price' => '18,700',
-                                    'nontax' => '17,000',
-                                    'content' => '●収納庫表面(吊り戸棚、調理台下)、収納庫扉枠 ●流し台上の照明(天井照明は除く) ●スイッチプレート ●加熱調理器(魚焼きグリルは除く) ●調理台 ●シンク(排水口・ゴミ受け・洗剤トレイなど) ●蛇口 ●流し台前面壁(窓の内側) ●レンジフード表面 ●床・幅木 ●調味料等小物'
+                                    'price' => '20,680',
+                                    'nontax' => '18,800',
+                                    'content' => '●収納庫表面(吊り戸棚・調理台下)、収納庫扉枠 ●流し台上の照明(天井照明は除く) ●スイッチプレート ●加熱調理器(魚焼きグリルは除く) ●調理台 ●シンク(排水口・ゴミ受け・洗剤トレイなど) ●蛇口 ●流し台前面（壁・内窓） ●レンジフード表面 ●床・幅木 ●調味料等小物'
                                 ),
                                 array(
                                     'spot' => 'レンジフード',
                                     'en' => 'Range food',
                                     'slug' => 'range',
                                     'text' => 'ご家庭では難しい<br>頑固な油汚れもスッキリ！<br>レンジフードが驚くほどキレイに。',
-                                    'price' => '19,800',
-                                    'nontax' => '18,000',
+                                    'price' => '22,000',
+                                    'nontax' => '20,000',
                                     'content' => '●フード　●パーツ(フィルター・ファ ン・油受けなど)　●本体'
                                 ),
                                 array(
-                                    'spot' => 'バスルーム',
+                                    'spot' => '浴室',
                                     'en' => 'BATHROOM',
                                     'slug' => 'bath',
-                                    'text' => '手に負えない壁や天井に生えたカビ、<br>
+                                    'text' => '手に負えない壁や天井に生えたカビ・<br>
                                     湯アカ汚れも隅々までキレイに。',
-                                    'price' => '19,800',
-                                    'nontax' => '18,000',
-                                    'content' => '●浴槽・浴槽のふた ●窓ガラス(内側のみ) ●蛇口などの金属部分 ●ドア ●鏡 ●排水口 ●小物(洗面器・シャンプーボトルなど) ●照明器具 ●換気口表面 ●高所(壁面・天井) ●床面'
+                                    'price' => '22,000',
+                                    'nontax' => '20,000',
+                                    'content' => '●浴槽・浴槽のふた ●窓ガラス(内側のみ) ●蛇口などの金属部分 ●ドア ●鏡 ●排水口 ●小物(洗面器・シャンプーボトルなど) ●照明器具 ●換気口表面 ●天井・壁面・床面'
                                 ),
                                 array(
                                     'spot' => 'トイレ・洗面所',
@@ -341,11 +349,11 @@ require_once $include . '_header.php';
                                     清潔感あふれる爽やかな空間に。',
                                     'spot1' => '洗面所',
                                     'spot2' => 'トイレ',
-                                    'price1' => '9,460',
-                                    'nontax1' => '8,600',
-                                    'price2' => '9,460',
-                                    'nontax2' => '8,600',
-                                    'content' => '<span class="head">洗面所</span>●収納庫表面、収納庫扉枠 ●洗面台の照明(天井照明を除く) ●カウンタートップ ●洗面ボウル ●蛇口 ●鏡 ●備品(石けん受けなど) ●ドア ●洗濯機・乾燥機表面 ●床・幅木 ●オープン棚 ●窓ガラス(内側のみ) ●高所<span class="head">トイレ</span>●壁面 ●ペーパーホルダー ●水洗タンク表面と蛇口 ●便器 ●備品(トイレポットなど) ●床・幅木 ●ドア ●照明器具 ●排気口の表面 ●窓ガラス(内側のみ) ●天井 ●温水洗浄ノズル ●オープンの棚 ●収納庫表面、収納庫扉枠'
+                                    'price1' => '10,340',
+                                    'nontax1' => '9,400',
+                                    'price2' => '10,340',
+                                    'nontax2' => '9,400',
+                                    'content' => '<span class="head">洗面所</span>●収納庫表面・収納庫扉枠 ●洗面台の照明(天井照明を除く) ●カウンタートップ ●洗面ボウル ●蛇口 ●鏡 ●備品(石けん受けなど) ●ドア ●洗濯機・乾燥機表面 ●床・幅木 ●オープン棚 ●窓ガラス(内側のみ) ●天井などの高所●スイッチプレート●オープン棚<span class="head">トイレ</span>●タイル壁面 ●ペーパーホルダー ●水洗タンク表面と蛇口 ●便器 ●備品(トイレポットなど) ●床・幅木 ●ドア ●照明器具 ●排気の表面 ●窓ガラス(内側のみ) ●天井 ●温水洗浄便座ノズル ●オープン棚 ●収納庫表面・収納庫扉枠●スイッチプレート'
                                 ),
                             );
                             $num = 0;
@@ -452,7 +460,7 @@ require_once $include . '_header.php';
                 <div class="topVoiceItemWrap">
                     <?php $list = array(
                         array(
-                            'text' => '浴室クリーニングのオプションで、換気扇や、パッキンのカビなどを依頼しました。とても、綺麗になりプロの力を感じました。過剰なセールストークもなく、薬剤を使用したあとの換気指導、日常の掃除方法などをアドバイスしてくださり、とても助かりました。<br>決して安い料金では、ありませんが、プロ意識を持って、真摯に対応してくださったので、お願いしてよかったとおもいました。'
+                            'text' => '浴室クリーニングのオプションで、換気扇や、パッキンのカビなどを依頼しました。とても、綺麗になりプロの力を感じました。過剰なセールストークもなく、薬剤を使用したあとの換気指導、日常の掃除方法などをアドバイスしてくださり、とても助かりました。<br>決して安い料金ではありませんが、プロ意識を持って、真摯に対応してくださったので、お願いしてよかったとおもいました。'
                         ),
                         array(
                             'text' => '実家の浴室がカビなどが酷く、放置される事でかなり汚れており、自分で綺麗に出来る自信がありませんでした。手軽に申し込める金額ではないので悩みに悩みましたが、結果は大満足。こんなにも綺麗になるのですね。こういうサービスを利用するのが初めてだったのでどこを選んでいいかわからず、有名だという理由だけで選びましたが、従業員さんの対応含め大満足。<br>本当にありがとうございます。'
@@ -579,20 +587,19 @@ require_once $include . '_header.php';
 
             <section class="topTel">
                 <div class="topTel__bg"></div>
-                <div class="topTel__ttl">
-                    電話で無料相談・お見積りはこちら
+                <div class="topTel__ttl flex vcenter bet">
+                    <span class="topTel__ttl--line"></span>
+                    <span class="ttl">電話で無料相談・お見積りはこちら</span>
+                    <span class="topTel__ttl--line"></span>
                 </div>
-                <span class="topTel__shopname">
-                    ダスキン筑波嶺 メリーメイド
-                </span>
                 <div class="sp-wrap">
-                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0454893663">
+                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0120-3-82820">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            045-489-3663
+                            0120-3-82820
                         </span>
                         <span class="topTel__open">
-                            9:00～17:00<br>定休日：土日祝
+                            8:30～18:00<br>土曜のみ12:00まで<br>定休日：土曜(午後)日祝
                         </span>
                     </a>
                 </div>
@@ -863,10 +870,10 @@ require_once $include . '_header.php';
                                     定期
                                 </span>
                                 <span class="topPriceItem__price--num">
-                                    9,900
+                                    11,000
                                 </span>
                                 <span class="topPriceItem__price--small">
-                                    円(税抜9,000円)
+                                    円(税抜10,000円)
                                 </span>
                             </div>
                             <div class="topPriceItem__price small flex vcenter">
@@ -874,10 +881,10 @@ require_once $include . '_header.php';
                                     1回のみ
                                 </span>
                                 <span class="topPriceItem__price--num small">
-                                    11,000
+                                    13,200
                                 </span>
                                 <span class="topPriceItem__price--small small">
-                                    円(税抜10,000円)
+                                    円(税抜12,000円)
                                 </span>
                             </div>
                             <p class="topPriceItem__text">
@@ -894,7 +901,7 @@ require_once $include . '_header.php';
                         ※表示料金は消費税率10％を含む総額表示です。<br>
                         ※サービスは、予告なしにデザインや仕様、料金の変更や販売を中止することがございますので、ご了承ください。<br>
                         ※1回2時間（延長はご要望に応じて）より、ご希望の家事を組み合わせてご利用いただけます。<br>
-                        ※定期サービスは、ご要望に応じて、1週間に2～5回のサイクルもお受けいたします。<br>
+                        ※定期サービスは、ご要望に応じて、1週間に1～5回、2週間に1回のサイクルでお受けいたします。<br>
                         ※男性のみでご在宅の場合は、スタッフ2名、半分のお時間でお伺いいたします。<br>
                         ※サービスカーの駐車スペースのご用意をお願いします。<br>
                         駐車できない場合は有料駐車場を利用するため、駐車料金をご負担いただきます。<br>
@@ -1060,12 +1067,12 @@ require_once $include . '_header.php';
                     <div class="topFaqItemWrap">
                         <?php $list = array(
                             array(
-                                'ques' => '「お掃除サービス」と「家事おてつだいサービス」の違いはなんですか？',
-                                'ans' => '「お掃除サービス」は、キッチンやリビングなどお部屋ごとに専用の資器材を使って汚れに応じたお掃除を徹底して行うサービスです。<br>「家事おてつだいサービス」は、毎日の家事（洗濯やアイロンや食器洗いなど）を頼みたいというお客様の声から生まれた家事全般をお手伝いするサービスで、お客様宅でいつも使っておられる道具・洗剤などを利用して時間内にできることを行います。',
+                                'ques' => '「お掃除おまかせサービス」と「家事おてつだいサービス」の違いはなんですか？',
+                                'ans' => '「お掃除おまかせサービス」は、キッチンやリビングなどお部屋ごとに専用の資器材を使って汚れに応じたお掃除を徹底して行うサービスです。<br>「家事おてつだいサービス」は、毎日の家事（洗濯やアイロンや食器洗いなど）を頼みたいというお客様の声から生まれた家事全般をお手伝いするサービスで、お客様宅でいつも使っておられる道具・洗剤などを利用して時間内にできることを行います。',
                             ),
                             array(
                                 'ques' => 'うちは汚れているから、料金は高くなるの？',
-                                'ans' => '定期サービスも1回のみのサービスも、料金は汚れによって変わるものではありません。',
+                                'ans' => '定期サービスも1回のみのサービスも、料金は汚れによって変わるものではありません。定期サービスの場合、初回に一度だけいただく初回金が、汚れの程度によって違います。',
                             ),
                             array(
                                 'ques' => '家事やお掃除をしてもらうときは、留守でもいいの？',
@@ -1119,12 +1126,12 @@ require_once $include . '_header.php';
                             サービス
                         </a>
                         <a class="topContactTabItem topContactTabItem--pink flex vcenter hcenter js-form-tab" href="kaji">
-                            家事お手伝い<br>
+                            家事おてつだい<br>
                             サービス
                         </a>
                     </div>
                     <div class="topContactForm topContactForm--blue js-form show" id="form-clean">
-                        <form action="<?php echo HOME; ?>tsukubane/mail.php" method="post">
+                        <form action="<?php echo HOME; ?>mail.php" method="post">
                             <input type="text" hidden name="サービス内容" value="お掃除おまかせサービス">
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
@@ -1233,17 +1240,31 @@ require_once $include . '_header.php';
                             </div>
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
-                                    依頼したい内容やご相談事
+                                    依頼内容（複数選択可）
                                     <span class="topContactForm__ques--req flex vcenter hcenter">
                                         必須
                                     </span>
                                 </div>
-                                <div class="topContactForm__ans">
-                                    <textarea name="依頼したい内容やご相談事" id="" placeholder="リビングと寝室のお掃除、犬の散歩をお願いしたいです。" class="validate【required】"></textarea>
+                                <div class="topContactForm__checkbox">
+                                    <label><input type="checkbox" name="依頼内容[]" value="レンジフード" />レンジフード</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="キッチン" />キッチン</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="浴室" />浴室</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="洗面所" />洗面所</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="トイレ" />トイレ</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="その他" id="request_other" />その他</label>
                                 </div>
                             </div>
+                            <div class="topContactForm__form">
+                                <div class="topContactForm__ques flex vcenter">
+                                    依頼したい内容やご相談事
+                                </div>
+                                <div class="topContactForm__ans">
+                                    <textarea name="依頼したい内容やご相談事" id="request_content" placeholder="リビングと寝室のお掃除をお願いしたいです。"></textarea>
+                                </div>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6Lf4EG0pAAAAAFwv6x4BO1S-5A4dNhr_5hdgnJrV" data-callback="verifyCallback"></div>
                             <div class="topContactFormBtnWrap">
-                                <button class="topContactForm__btn btn md-btn pink op" type="submit">
+                                <button class="topContactForm__btn btn md-btn pink op" type="submit" id="send" disabled>
                                     見積りを依頼する
                                 </button>
                             </div>
@@ -1252,12 +1273,12 @@ require_once $include . '_header.php';
                             <span class="topContactForm__notice--head">
                                 【個人情報の取扱いについて】
                             </span>
-                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましては株式会社ダスキン南関東地域本部03-5909-6732までご連絡ください。
+                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましてはダスキン鎌倉 メリーメイド　0120-3-82820　までご連絡ください。
                         </p>
                     </div>
 
                     <div class="topContactForm topContactForm--pink js-form" id="form-kaji">
-                        <form action="<?php echo HOME; ?>tsukubane/mail.php" method="post">
+                        <form action="<?php echo HOME; ?>mail.php" method="post">
                             <input type="text" hidden name="サービス内容" value="家事お手伝いサービス">
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
@@ -1366,17 +1387,34 @@ require_once $include . '_header.php';
                             </div>
                             <div class="topContactForm__form">
                                 <div class="topContactForm__ques flex vcenter">
-                                    依頼したい内容やご相談事
+                                    依頼内容（複数選択可）
                                     <span class="topContactForm__ques--req flex vcenter hcenter">
                                         必須
                                     </span>
                                 </div>
-                                <div class="topContactForm__ans">
-                                    <textarea name="依頼したい内容やご相談事" id="" placeholder="リビングと寝室のお掃除、犬の散歩をお願いしたいです。" class="validate【required】"></textarea>
+                                <div class="topContactForm__checkbox">
+                                    <label><input type="checkbox" name="依頼内容[]" value="掃除機掛け" />掃除機掛け</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="水まわりのお掃除（日常清掃）" />水まわりのお掃除（日常清掃）</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="拭き掃除" />拭き掃除</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="食器洗い" />食器洗い</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="洗濯" />洗濯</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="ベッドメイキング" />ベッドメイキング</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="調理（ご在宅時のみ）" />調理（ご在宅時のみ）</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="片づけ" />片づけ</label>
+                                    <label><input type="checkbox" name="依頼内容[]" value="その他" id="request_other2" />その他</label>
                                 </div>
                             </div>
+                            <div class="topContactForm__form">
+                                <div class="topContactForm__ques flex vcenter">
+                                    依頼したい内容やご相談事
+                                </div>
+                                <div class="topContactForm__ans">
+                                    <textarea name="依頼したい内容やご相談事" id="request_content" placeholder="リビングと寝室のお掃除をお願いしたいです。" validate[condRequired[request_other2]]></textarea>
+                                </div>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6Lf4EG0pAAAAAFwv6x4BO1S-5A4dNhr_5hdgnJrV" data-callback="verifyCallback2"></div>
                             <div class="topContactFormBtnWrap">
-                                <button class="topContactForm__btn btn md-btn pink" type="submit">
+                                <button class="topContactForm__btn btn md-btn pink" type="submit" id="send2" disabled>
                                     見積りを依頼する
                                 </button>
                             </div>
@@ -1385,7 +1423,7 @@ require_once $include . '_header.php';
                             <span class="topContactForm__notice--head">
                                 【個人情報の取扱いについて】
                             </span>
-                            お預かりした個人情報は、ダスキングループ及びフランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましては株式会社ダスキン南関東地域本部03-5909-6732までご連絡ください。
+                            お預かりした個人情報は、フランチャイズチェーン加盟店にて無料お見積りの受付及びお見積りに必要なご連絡に利用させていただきます。個人情報に関するお問い合わせ、ご自身の個人情報の開示・訂正・利用停止につきましてはダスキン●● メリーメイド　0120-3-82820　までご連絡ください。
                         </p>
                     </div>
                     <p class="topContact__notice">
@@ -1401,20 +1439,19 @@ require_once $include . '_header.php';
             </section>
             <section class="topTel">
                 <div class="topTel__bg"></div>
-                <div class="topTel__ttl">
-                    電話で無料相談・お見積りはこちら
+                <div class="topTel__ttl flex vcenter bet">
+                    <span class="topTel__ttl--line"></span>
+                    <span class="ttl">電話で無料相談・お見積りはこちら</span>
+                    <span class="topTel__ttl--line"></span>
                 </div>
-                <span class="topTel__shopname">
-                    ダスキン筑波嶺 メリーメイド
-                </span>
                 <div class="sp-wrap">
-                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0454893663">
+                    <a class="topTel__tel flex bet hcenter vcenter" href="tel:0120-3-82820">
                         <span class="topTel__num flex vcenter robo">
                             <i class="icon icon-phone"></i>
-                            045-489-3663
+                            0120-3-82820
                         </span>
                         <span class="topTel__open">
-                            9:00～17:00<br>定休日：土日祝
+                            8:30～18:00<br>土曜のみ12:00まで<br>定休日：土曜(午後)日祝
                         </span>
                     </a>
                 </div>
